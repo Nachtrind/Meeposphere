@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MeepleController : MonoBehaviour
 {
@@ -10,13 +11,12 @@ public class MeepleController : MonoBehaviour
 	float acceptableDistance = 0.2f;
 	float speed = 6.5f;
 	Vector3 pushback;
-
 	bool gotCalledByPlayer;
 	bool hitObstacle;
 	float obstacleTimer = 0.1f;
-
 	Camera arCam;
 	Quaternion targetRot;
+	List<Tile> currentPath;
 
 	// Use this for initialization
 	void Start ()
@@ -44,16 +44,8 @@ public class MeepleController : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetMouseButtonDown (0)) {
+		if (currentPath.Count > 0) {
 
-			gotCalledByPlayer = true;
-
-			Ray ray = this.arCam.ScreenPointToRay (Input.mousePosition);
-			RaycastHit hit;
-			if (Physics.Raycast (ray, out hit, 100)) {
-				target = hit.point;
-				mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
-			}
 		}
 
 	}
@@ -61,8 +53,6 @@ public class MeepleController : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-
-
 		float currentDistance = Vector3.Distance (mTrans.position, target);
 
 		if (currentDistance > acceptableDistance) {

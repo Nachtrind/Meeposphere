@@ -11,11 +11,32 @@ public class World
 	float angleToAdd = 90.0f;
 	int neighboursToCheck = 4;
 
-	public LevelGraph CreateLevelGraph(GameObject _world)
+	public List<Tile> GenerateWalkables (LevelGraph _graph, GameObject _world)
+	{
+
+		List<Tile> basic = _graph.BasicGraph;
+		List<Tile> walkable = new List<Tile> ();
+
+		//only Hit Obstacles
+		int layerMask = 1 << 11;
+
+		foreach (Tile t in basic) {
+			Vector3 gravityUp = (t.WorldPos - _world.transform.position).normalized;
+			RaycastHit hit;
+			if (Physics.Raycast (t.WorldPos + (gravityUp*-2), t.WorldPos + gravityUp*2, out hit, Mathf.Infinity, layerMask)) {
+				t.Walkable = false;
+			}
+			walkable.Add(t);
+		}//END foreach
+
+		return walkable;
+	}
+
+	public LevelGraph CreateLevelGraph (GameObject _world)
 	{
 		LevelGraph graph = new LevelGraph ();
 
-		List<Tile> nodesOnly = new List<Tile>();
+		List<Tile> nodesOnly = new List<Tile> ();
 
 		//collect all nodes
 		Mesh mesh = _world.GetComponent<MeshFilter> ().mesh;
@@ -81,14 +102,14 @@ public class World
 
 								//check if Tile is already in List
 								foreach (int neigh in currentTile.Neighbours) {
-									if (ti.WorldPos == returnList[neigh].WorldPos) {
+									if (ti.WorldPos == returnList [neigh].WorldPos) {
 										inList = true;
 										break;
 									}
 								}
 
 								if (!inList) {
-									currentTile.Neighbours.Add(returnList.IndexOf(ti));
+									currentTile.Neighbours.Add (returnList.IndexOf (ti));
 									foundTile = true;
 									break;
 								}

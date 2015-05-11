@@ -11,24 +11,31 @@ public class Controller : MonoBehaviour
 	bool vectorSet = false;
 	Tile clicked;
 	List<Tile> returnList = new List<Tile> ();
-	World world = new World();
+	World world = new World ();
 	LevelGraph lGraph;
-
+	List<Tile> walkables = new List<Tile> ();
 	public GameObject testMeeple;
 	List<Vector3> path;
 
 	void OnDrawGizmos ()
 	{
-		if (vectorSet) {
-			Gizmos.color = Color.yellow;
-			Gizmos.DrawSphere (clicked.WorldPos, 0.1f);
-
-
-			foreach(Vector3 vec in path){
-				Gizmos.color = Color.red;
-				Gizmos.DrawSphere (vec, 0.1f);
-			}
+		foreach (Vector3 vec in path) {
+			Gizmos.color = Color.cyan;
+			Gizmos.DrawSphere(vec, 0.2f);
 		}
+
+
+		/*if (walkables.Count > 0) {
+			foreach (Tile t in walkables) {
+				if(t.Walkable){
+					Gizmos.color = Color.green;
+					Gizmos.DrawSphere(t.WorldPos, 0.3f);
+				}else{
+					Gizmos.color = Color.red;
+					Gizmos.DrawSphere(t.WorldPos, 0.3f);
+				}
+			}
+		}*/
 	}
 
 	// Use this for initialization
@@ -47,9 +54,12 @@ public class Controller : MonoBehaviour
 		//help.SaveLevelGraph (lGraph, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 		//Debug.Log ("Loading from: " + Application.dataPath +"/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 		lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
-		Debug.Log(lGraph.BasicGraph.Count);
-		Debug.Log(lGraph.WalkableGraph.Count);
-
+		Debug.Log (lGraph.BasicGraph.Count);
+		Debug.Log (lGraph.WalkableGraph.Count);
+		//walkables = lGraph.WalkableGraph;
+		//walkables = world.GenerateWalkables (lGraph, globe);
+		//lGraph.WalkableGraph = walkables;
+		//help.SaveLevelGraph (lGraph, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 	}
 	
 	// Update is called once per frame
@@ -64,10 +74,10 @@ public class Controller : MonoBehaviour
 				Vector3 target = hit.point;
 				clicked = help.GetClickedTile (target, lGraph.BasicGraph, globe);
 				vectorSet = true;
-				AStar star = new AStar();
+				AStar star = new AStar ();
 
 				//path = star.FindShortestPath(lGraph.BasicGraph, help.GetClickedTile(testMeeple.transform.position, lGraph.BasicGraph, globe), clicked);
-				path = star.FindPath(lGraph.BasicGraph, help.GetClickedTile(testMeeple.transform.position, lGraph.BasicGraph, globe), clicked, globe);
+				path = star.FindPath (lGraph.WalkableGraph, help.GetClickedTile (testMeeple.transform.position, lGraph.BasicGraph, globe), clicked, globe);
 			}
 		}
 	}
