@@ -1,28 +1,104 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
+[System.Serializable]
 public class Tile
 {
 
 	bool walkable;
-	float size;
-	float posX;
-	float posY;
+	float x;
+	float y;
+	float z;
+	List<int> neighbours = new List<int> ();
+	int mode;
 
-	// 1  2  3
-	// 4  5  6
-	// 7  8  9
-	//Each node can have up to 8 neighbours, 5 is self
-	Tile[] neighbours = new Tile[9];
+	Tile parent;
+	bool inList;
+	int gCost;
+	int hCost;
 
-	public Tile (float _x, float _y, float _size, bool _walkable)
+	public Tile (Vector3 _worldPos)
 	{
-
-		this.posX = _x;
-		this.posY = _y;
-		this.size = _size;
-		this.walkable = _walkable;
-
+		this.x = _worldPos.x;
+		this.y = _worldPos.y;
+		this.z = _worldPos.z;
+		inList = false;
 	}
 
-}
+	public List<int> Neighbours {
+		get {
+			return neighbours;
+		}
+		set {
+			neighbours = value;
+		}
+	}
+
+	public Vector3 WorldPos {
+		get {
+			return new Vector3 (x, y, z);
+		}
+	}
+
+	public bool Walkable {
+		get {
+			return walkable;
+		}
+		set {
+			walkable = value;
+		}
+	}
+
+	public Tile Parent {
+		get {
+			return parent;
+		}
+
+		set{
+			parent = value;
+		}
+	}
+
+	public bool InList {
+		get {
+			return inList;
+		}
+		set{
+			inList = value;
+		}
+	}
+
+	public int Mode {
+		get {
+			return mode;
+		}
+		set{
+			mode = value;
+		}
+	}
+
+	public int GCost {
+		get {
+			return gCost;
+		}
+		set{
+			gCost = value;
+		}
+	}
+
+	public int HCost {
+		get {
+			return hCost;
+		}
+		set {
+			hCost = value;
+		}
+	}
+
+	public int FCost(){
+		return (gCost + hCost);
+		}
+
+
+	}
