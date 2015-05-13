@@ -14,12 +14,13 @@ public class MeepleController : MonoBehaviour
 	bool gotCalledByPlayer;
 	bool hitObstacle;
 	float obstacleTimer = 0.1f;
-	Camera arCam;
 	Quaternion targetRot;
 	List<Vector3> currentPath;
 	AStar star = new AStar ();
 	Utilities help = new Utilities ();
 	bool reachedTarget;
+
+	public bool active;
 
 	void OnDrawGizmos ()
 	{
@@ -35,6 +36,8 @@ public class MeepleController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		active = true; //for Testing, later it has to be false by default
+
 		mTrans = transform;
 		target = mTrans.position;
 
@@ -48,13 +51,6 @@ public class MeepleController : MonoBehaviour
 		acceptableDistance = GetComponent<MeshFilter> ().mesh.bounds.size.x * mTrans.localScale.x * 3;
 		gotCalledByPlayer = false;
 
-		//Set Main Camera
-		Camera[] cams = Camera.allCameras;
-		foreach (Camera cam in cams) {
-			if (cam.tag.Equals ("MainCamera")) {
-				this.arCam = cam;
-			}
-		}
 	}
 
 	void Update ()

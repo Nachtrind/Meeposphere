@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11415070}
   - 54: {fileID: 5452702}
   - 114: {fileID: 11481080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Meeple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ GameObject:
   - 33: {fileID: 3345502}
   - 23: {fileID: 2392472}
   - 64: {fileID: 6410470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: {fileID: 0}
   rigid: {fileID: 0}
+  active: 0
 --- !u!114 &11481080
 MonoBehaviour:
   m_ObjectHideFlags: 1

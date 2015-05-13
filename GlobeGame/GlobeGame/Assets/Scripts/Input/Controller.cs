@@ -32,9 +32,9 @@ public class Controller : MonoBehaviour
 		//Debug.Log (lGraph.BasicGraph.Count);
 		//help.SaveLevelGraph (lGraph, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 		//Debug.Log ("Loading from: " + Application.dataPath +"/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
-		lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
-		Debug.Log (lGraph.BasicGraph.Count);
-		Debug.Log (lGraph.WalkableGraph.Count);
+		//lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
+		//Debug.Log (lGraph.BasicGraph.Count);
+		//Debug.Log (lGraph.WalkableGraph.Count);
 		//walkables = lGraph.WalkableGraph;
 		//walkables = world.GenerateWalkables (lGraph, globe);
 		//lGraph.WalkableGraph = walkables;
