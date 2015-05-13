@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: crystal2
+  m_Name: crystal-green
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHABLEND_ON _DETAIL_MULX2 _EMISSION _NORMALMAP
   m_LightmapFlags: 1
@@ -134,12 +134,12 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 1.00794113, g: .274219304, b: .350121319, a: 1.49000001}
+        second: {r: .0311759338, g: .398287416, b: .471102953, a: 1.49000001}
       data:
         first:
           name: _Color
-        second: {r: .882352948, g: .395761251, b: .395761251, a: 1}
+        second: {r: 0, g: .897058845, b: .637221098, a: 1}
       data:
         first:
           name: _EmissionColorUI
-        second: {r: .676470578, g: .184039801, b: .234980747, a: 1}
+        second: {r: .020923445, g: .267306983, b: .316176474, a: 1}
