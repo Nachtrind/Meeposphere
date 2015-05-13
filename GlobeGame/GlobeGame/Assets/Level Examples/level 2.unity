@@ -1422,7 +1422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &237547918
 Prefab:
   m_ObjectHideFlags: 0
@@ -7417,6 +7417,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 438202, guid: d981194bd968e4375b90c623a1627a7f, type: 2}
   m_PrefabInternal: {fileID: 1200907458}
+--- !u!1001 &1201638205
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.35487223
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 56.5325623
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.4652014
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -.294802278
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: .9555583
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7eecae0d5f903c046b907eebd8c1222e, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 751eae78d2397874d949f866c2244ea9, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1001 &1209767378
 Prefab:
   m_ObjectHideFlags: 0
