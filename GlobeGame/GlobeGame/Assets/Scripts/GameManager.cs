@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 	public List<MeepleController> allMeeples;
 	public LevelGraph lGraph;
 	public GameObject globe;
+	public Camera arCam;
 	Utilities help = new Utilities ();
 
 	public static GameManager Instance {
@@ -35,6 +36,16 @@ public class GameManager : MonoBehaviour
 
 		globe = GameObject.FindGameObjectsWithTag ("Globe") [0];
 		lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
+	
+	
+		//Set Main Camera
+		Camera[] cams = Camera.allCameras;
+		foreach (Camera cam in cams) {
+			if (cam.tag.Equals ("MainCamera")) {
+				this.arCam = cam;
+			}
+		}
+	
 	}
 	
 	// Update is called once per frame
