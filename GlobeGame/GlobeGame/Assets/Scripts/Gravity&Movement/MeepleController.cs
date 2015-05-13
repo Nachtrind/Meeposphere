@@ -16,7 +16,21 @@ public class MeepleController : MonoBehaviour
 	float obstacleTimer = 0.1f;
 	Camera arCam;
 	Quaternion targetRot;
-	List<Tile> currentPath;
+	List<Vector3> currentPath;
+	AStar star = new AStar ();
+	Utilities help = new Utilities ();
+	bool reachedTarget;
+
+	void OnDrawGizmos ()
+	{
+
+		/*foreach (Vector3 vec in currentPath) {
+			Gizmos.color = Color.cyan;
+			Gizmos.DrawSphere (vec, 0.2f);
+		}*/
+
+	}
+
 
 	// Use this for initialization
 	void Start ()
@@ -28,6 +42,7 @@ public class MeepleController : MonoBehaviour
 		rigid.constraints = RigidbodyConstraints.FreezeRotation;
 		rigid.useGravity = false;
 
+		reachedTarget = true;
 
 		//acceptable Distance is Meeple width
 		acceptableDistance = GetComponent<MeshFilter> ().mesh.bounds.size.x * mTrans.localScale.x * 3;
@@ -44,8 +59,13 @@ public class MeepleController : MonoBehaviour
 
 	void Update ()
 	{
-		if (currentPath.Count > 0) {
-
+		
+		if (currentPath != null && currentPath.Count > 0 && reachedTarget) {
+			target = currentPath [0];
+			currentPath.RemoveAt (0);
+			reachedTarget = false;
+			mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
+			gravity.Gravitate (mTrans);
 		}
 
 	}
@@ -53,41 +73,26 @@ public class MeepleController : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
+		gravity.Gravitate (mTrans);
 		float currentDistance = Vector3.Distance (mTrans.position, target);
 
 		if (currentDistance > acceptableDistance) {
 			rigid.MovePosition (mTrans.position + mTrans.forward * speed * Time.deltaTime);
-
-			//Check in Front
-			Ray ray = new Ray (mTrans.position, mTrans.forward);
-			RaycastHit hit;
-
-			if (Physics.Raycast (ray, out hit, 1)) {
-				hitObstacle = true;
-				pushback = mTrans.forward.normalized * -50;
-				Debug.Log ("hitObstacle");
-				target = transform.position;
-				gotCalledByPlayer = false;
-			}
+		} else {
+			reachedTarget = true;
 		}
-
-		if (hitObstacle && obstacleTimer > 0) {
-
-			rigid.AddForce (pushback);
-			obstacleTimer -= Time.deltaTime;
-		} else if (hitObstacle && obstacleTimer <= 0) {
-			hitObstacle = false;
-			obstacleTimer = 0.1f;
-		}
-
-		gravity.Gravitate (mTrans);
-
 
 	}
 
-
-
-
+	public void CalcNewPath (List<Tile> _graph, Tile _end, GameObject _globe)
+	{
+		this.currentPath = star.FindPath (_graph, help.GetClickedTile (transform.position, _graph, _globe), _end, _globe);
+		target = currentPath [0];
+		currentPath.RemoveAt (0);
+		reachedTarget = false;
+		mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
+		gravity.Gravitate (mTrans);
+	}
 
 
 }
