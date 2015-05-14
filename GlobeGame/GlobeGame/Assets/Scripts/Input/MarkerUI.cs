@@ -18,10 +18,13 @@ public class MarkerUI : MonoBehaviour
 	Image arrowImg;
 	Vector3 center;
 	float radius;
+	Vector3 target;
 
 	// Update is called once per frame
 	void Start ()
 	{
+		
+		target = new Vector3 (0, 0, 0);
 		mouseDown = false;
 
 		foreach (Transform t in GetComponentsInChildren<Transform>()) {
@@ -41,11 +44,7 @@ public class MarkerUI : MonoBehaviour
 				this.pushImg = t.GetComponent<Image> ();
 			}
 		}
-
-		Debug.Log ("Local Pos: " + this.transform.localPosition + "WorldPos:  " + this.transform.position + "   pushimg local pos: " + pushImg.transform.localPosition + "   pushimg world pos: " + pushImg.transform.localPosition);
-
-		radius = Vector3.Distance (this.transform.localPosition, transform.InverseTransformPoint (pushImg.transform.position));
-		Debug.Log ("Radius is : " + radius);
+		radius = Vector3.Distance (new Vector3 (0, 0, 0), pushImg.rectTransform.anchoredPosition3D);
 	}
 
 	// Update is called once per frame
@@ -55,21 +54,14 @@ public class MarkerUI : MonoBehaviour
 
 			Ray ray = GameManager.Instance.arCam.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
-			Vector3 target = new Vector3 (0, 0, 0);
 			if (Physics.Raycast (ray, out hit, 100)) {
 				target = hit.point;
 			}
 
-			if (Vector3.Distance (pushImg.transform.position, target) == this.radius) {
-				pushImg.transform.position = target;
-			} else {
-				float localY = pushImg.transform.localPosition.y; 
-				Vector3 newPos = target - center;
-				newPos = Vector3.Normalize (newPos) * radius;
-				pushImg.transform.position = newPos;
-				pushImg.transform.localPosition = new Vector3 (pushImg.transform.localPosition.x, localY, pushImg.transform.localPosition.z); 
-
-			}
+			Vector3 pointOnCircle = transform.InverseTransformPoint (target).normalized * radius;
+			pushImg.rectTransform.anchoredPosition3D = new Vector3 (pointOnCircle.x, pointOnCircle.y, pushImg.rectTransform.anchoredPosition3D.z);
+			pushImg.transform.LookAt (new Vector3 (this.transform.position.x, 0, this.transform.position.z));	
+			
 		}
 		
 	}
