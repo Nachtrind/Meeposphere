@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: crystal3
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -19,7 +19,7 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 2.04999995, y: .600000024}
+          m_Scale: {x: 4, y: .670000017}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -32,7 +32,7 @@ Material:
         first:
           name: _DetailNormalMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 89d470b2c2747954a8225eb694a87ccd, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -54,7 +54,7 @@ Material:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 2800000, guid: a974cd143ccab1d4ba8e6234fa05fb13, type: 3}
-          m_Scale: {x: 2.04999995, y: .600000024}
+          m_Scale: {x: 4, y: .670000017}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -101,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 1
+        second: .119999997
       data:
         first:
           name: _BumpScale
@@ -113,7 +113,7 @@ Material:
       data:
         first:
           name: _DetailNormalMapScale
-        second: 1
+        second: 11.8599997
       data:
         first:
           name: _UVSec
@@ -129,17 +129,17 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 1
+        second: .949999988
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: .514463603, g: 1.18588221, b: .63022548, a: 1.67999995}
+        second: {r: 0, g: 1.19823515, b: .504085064, a: 1.67999995}
       data:
         first:
           name: _Color
-        second: {r: .970588207, g: .121323526, b: .420030415, a: 1}
+        second: {r: 0, g: .581439853, b: .926470578, a: 1}
       data:
         first:
           name: _EmissionColorUI
-        second: {r: .30622834, g: .705882311, b: .37513423, a: 1}
+        second: {r: 0, g: .713235259, b: .300050646, a: 1}
