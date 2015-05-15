@@ -19,7 +19,6 @@ public class MeepleController : MonoBehaviour
 	AStar star = new AStar ();
 	Utilities help = new Utilities ();
 	bool reachedTarget;
-
 	public bool active;
 
 	void OnDrawGizmos ()
@@ -55,13 +54,16 @@ public class MeepleController : MonoBehaviour
 
 	void Update ()
 	{
-		
-		if (currentPath != null && currentPath.Count > 0 && reachedTarget) {
-			target = currentPath [0];
-			currentPath.RemoveAt (0);
-			reachedTarget = false;
-			mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
-			gravity.Gravitate (mTrans);
+		if (currentPath != null) {
+			if (currentPath.Count > 0 && reachedTarget) {
+				target = currentPath [0];
+				currentPath.RemoveAt (0);
+				reachedTarget = false;
+				mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
+				gravity.Gravitate (mTrans);
+			} else if (currentPath.Count == 0 && reachedTarget) {
+				gotCalledByPlayer = false;
+			}
 		}
 
 	}
@@ -72,12 +74,13 @@ public class MeepleController : MonoBehaviour
 		gravity.Gravitate (mTrans);
 		float currentDistance = Vector3.Distance (mTrans.position, target);
 
-		if (currentDistance > acceptableDistance) {
-			rigid.MovePosition (mTrans.position + mTrans.forward * speed * Time.deltaTime);
-		} else {
-			reachedTarget = true;
+		if (gotCalledByPlayer) {
+			if (currentDistance > acceptableDistance) {
+				rigid.MovePosition (mTrans.position + mTrans.forward * speed * Time.deltaTime);
+			} else {
+				reachedTarget = true;
+			}
 		}
-
 	}
 
 	public void CalcNewPath (List<Tile> _graph, Tile _end, GameObject _globe)
@@ -85,6 +88,7 @@ public class MeepleController : MonoBehaviour
 		this.currentPath = star.FindPath (_graph, help.GetClickedTile (transform.position, _graph, _globe), _end, _globe);
 		target = currentPath [0];
 		currentPath.RemoveAt (0);
+		gotCalledByPlayer = true;
 		reachedTarget = false;
 		mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 		gravity.Gravitate (mTrans);

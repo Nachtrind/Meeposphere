@@ -10,6 +10,7 @@ public class MarkerUI : MonoBehaviour
 	bool mouseDown;
 
 	//Color tints
+	public float force;
 	public Color call;
 	public Color push;
 	Image pushImg;
@@ -18,6 +19,7 @@ public class MarkerUI : MonoBehaviour
 	Image arrowImg;
 	Vector3 center;
 	float radius;
+	public float forceRadius = 2.2f;
 	Vector3 target;
 
 	// Update is called once per frame
@@ -45,6 +47,8 @@ public class MarkerUI : MonoBehaviour
 			}
 		}
 		radius = Vector3.Distance (new Vector3 (0, 0, 0), pushImg.rectTransform.anchoredPosition3D);
+		force = 8.0f;
+		forceRadius = 2.2f;
 	}
 
 	// Update is called once per frame
@@ -93,6 +97,19 @@ public class MarkerUI : MonoBehaviour
 
 	public void PushMeeples ()
 	{
+		Vector3 pushDirection = pushImg.transform.position - this.transform.position;
+
+		Vector3 upDir = GetComponentInParent<Transform> ().forward * -1;
+		Debug.DrawRay (this.transform.position, upDir, Color.green, 5.0f);
+		Collider[] hitColliders = Physics.OverlapSphere (this.transform.position, forceRadius);
+
+		pushDirection = pushDirection + upDir.normalized * 5.0f;
+
+		foreach (Collider col in hitColliders) {
+			if (col.tag.Equals ("Meeple")) {
+				col.attachedRigidbody.AddForce (pushDirection.normalized * force, ForceMode.Impulse);
+			}
+		}
 
 	}
 
@@ -115,6 +132,8 @@ public class MarkerUI : MonoBehaviour
 	{
 		mouseDown = !mouseDown;
 		if (mouseDown) {
+			this.currentMode = 1;
+			this.activeImg.GetComponent<Image> ().color = this.push;
 			arrowImg.enabled = true;
 		} else {
 			arrowImg.enabled = false;
