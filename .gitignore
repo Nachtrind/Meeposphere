@@ -7,12 +7,10 @@
 *.csproj
 *.unityproj
 *.sln
-*.suo
 *.tmp
 *.user
 *.userprefs
 *.pidb
-*.booproj
 
 .DS_Store
 /Library/FailedAssetImports.txt
@@ -21,10 +19,3 @@
 /Library/ScriptAssemblies
 /obj
 /Temp
-
-# Unity3D generated meta files
-*.pidb.meta
-
-# Unity3D Generated File On Crash Reports
-sysinfo.txt
-*.meta
