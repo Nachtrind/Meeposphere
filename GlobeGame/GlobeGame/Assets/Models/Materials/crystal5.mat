@@ -9,7 +9,7 @@ Material:
   m_Name: crystal5
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -101,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 1
+        second: .430000007
       data:
         first:
           name: _BumpScale
@@ -121,7 +121,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: 1.67999995
+        second: 1.88999999
       data:
         first:
           name: _Mode
@@ -129,16 +129,16 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 1
+        second: .879999995
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: .514463603, g: .824705362, b: 1.18588221, a: 1.67999995}
+        second: {r: .578771532, g: .927793562, b: 1.33411753, a: 1.88999999}
       data:
         first:
           name: _Color
-        second: {r: .970588207, g: .121323526, b: .420030415, a: 1}
+        second: {r: .121323526, g: .408316523, b: .970588207, a: 1}
       data:
         first:
           name: _EmissionColorUI
