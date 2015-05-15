@@ -9,6 +9,7 @@ TagManager:
   - liquid
   - movingStone
   - Hole
+  - Savepoint
   layers:
   - Default
   - TransparentFX
