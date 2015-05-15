@@ -14,12 +14,17 @@
 *.pidb
 *.booproj
 
+.DS_Store
+/Library/FailedAssetImports.txt
+/Library/cache/
+/Library/previews/
+/Library/ScriptAssemblies
+/obj
+/Temp
+
 # Unity3D generated meta files
 *.pidb.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
-GlobeGame/GlobeGame/Assets/Level/AR_DummyScene.unity.meta
 *.meta
-GlobeGame/GlobeGame/Assets/Models/Materials/clouds.FBX.meta
-GlobeGame/GlobeGame/Assets/Models/Materials/clouds.FBX.meta
