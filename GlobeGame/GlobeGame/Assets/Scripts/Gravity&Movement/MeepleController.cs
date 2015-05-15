@@ -6,6 +6,11 @@ public class MeepleController : MonoBehaviour
 {
 	public GlobeGravity gravity;
 	public Rigidbody rigid;
+	public bool active;
+	public Material m_active;
+	public Material m_asleep;
+	public Material m_panic;
+	public Material m_dead;
 	Vector3 target;
 	Transform mTrans;
 	float acceptableDistance = 0.2f;
@@ -19,24 +24,12 @@ public class MeepleController : MonoBehaviour
 	AStar star = new AStar ();
 	Utilities help = new Utilities ();
 	bool reachedTarget;
-	public bool active;
 
-	void OnDrawGizmos ()
-	{
-
-		/*foreach (Vector3 vec in currentPath) {
-			Gizmos.color = Color.cyan;
-			Gizmos.DrawSphere (vec, 0.2f);
-		}*/
-
-	}
 
 
 	// Use this for initialization
 	void Start ()
 	{
-		active = true; //for Testing, later it has to be false by default
-
 		mTrans = transform;
 		target = mTrans.position;
 
