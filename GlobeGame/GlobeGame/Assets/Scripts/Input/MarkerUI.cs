@@ -108,6 +108,7 @@ public class MarkerUI : MonoBehaviour
 		foreach (Collider col in hitColliders) {
 			if (col.tag.Equals ("Meeple")) {
 				col.attachedRigidbody.AddForce (pushDirection.normalized * force, ForceMode.Impulse);
+				col.GetComponentInParent<MeepleController> ().PushedAway ();
 			}
 		}
 
