@@ -13,6 +13,7 @@ GameObject:
   - 95: {fileID: 9538794}
   - 135: {fileID: 13562528}
   - 114: {fileID: 11446796}
+  - 108: {fileID: 10807136}
   m_Layer: 0
   m_Name: lava hole
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 152874}
   m_LocalRotation: {x: .584845841, y: 0, z: 0, w: .811144531}
   m_LocalPosition: {x: -16.5, y: 48.9500008, z: 13.7600002}
-  m_LocalScale: {x: 31, y: 31, z: 31}
+  m_LocalScale: {x: 31, y: 46.9000015, z: 31}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,6 +81,38 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!108 &10807136
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152874}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: .992647052, g: .335748285, b: .702705681, a: 1}
+  m_Intensity: 1.88
+  m_Range: 14.5100002
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1.61000001
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!114 &11446796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +133,7 @@ SphereCollider:
   m_GameObject: {fileID: 152874}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0109999999
   m_Center: {x: 0, y: 0, z: 0}
