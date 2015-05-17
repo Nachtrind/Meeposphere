@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: landmass1
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -25,14 +25,14 @@ Material:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 0138bffa64dd3e14d994f6aa9afc53e4, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _DetailNormalMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 3313046a07b672d4abee64c33d17c52a, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -53,7 +53,7 @@ Material:
         first:
           name: _EmissionMap
         second:
-          m_Texture: {fileID: 2800000, guid: 646b24267a9d4f84f937b1733a95467f, type: 3}
+          m_Texture: {fileID: 2800000, guid: 1bb609182a0a3da45a5e0b5944abcb3b, type: 3}
           m_Scale: {x: 4, y: 4}
           m_Offset: {x: 0, y: 0}
       data:
@@ -68,7 +68,7 @@ Material:
           name: _DetailAlbedoMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 3, y: 3}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -105,7 +105,7 @@ Material:
       data:
         first:
           name: _BumpScale
-        second: 1
+        second: 5.75
       data:
         first:
           name: _OcclusionStrength
@@ -121,7 +121,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: 1
+        second: 1.03999996
       data:
         first:
           name: _Mode
@@ -129,16 +129,16 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .69599998
+        second: .416000009
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: .61485827, b: .91911763, a: 1}
+        second: {r: 0, g: .639452577, b: .955882311, a: 1.03999996}
       data:
         first:
           name: _Color
-        second: {r: .0756920427, g: .212250903, b: .257352948, a: 1}
+        second: {r: .170253009, g: .399264008, b: .492647052, a: 1}
       data:
         first:
           name: _EmissionColorUI

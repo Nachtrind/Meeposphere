@@ -129,7 +129,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .289999992
+        second: .542999983
     m_Colors:
       data:
         first:
@@ -138,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .882352948, g: .58431375, b: .792156875, a: 1}
+        second: {r: .602941155, g: .376838207, b: .534515321, a: 1}
       data:
         first:
           name: _EmissionColorUI

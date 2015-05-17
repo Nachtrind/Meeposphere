@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: globe1
+  m_Name: rock4
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
+  m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -19,20 +19,20 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 3.81999993, y: 5}
+          m_Scale: {x: 2, y: 2}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 89d470b2c2747954a8225eb694a87ccd, type: 3}
+          m_Texture: {fileID: 2800000, guid: db900372cf31f6a4996dacaf60124338, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _DetailNormalMap
         second:
-          m_Texture: {fileID: 2800000, guid: cae6fa73cb6478449b25ef09ca707cd2, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -53,8 +53,8 @@ Material:
         first:
           name: _EmissionMap
         second:
-          m_Texture: {fileID: 2800000, guid: 3344580148fbc83459ae33cb0e05c254, type: 3}
-          m_Scale: {x: 3.81999993, y: 5}
+          m_Texture: {fileID: 2800000, guid: a974cd143ccab1d4ba8e6234fa05fb13, type: 3}
+          m_Scale: {x: 2, y: 2}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -68,7 +68,7 @@ Material:
           name: _DetailAlbedoMap
         second:
           m_Texture: {fileID: 0}
-          m_Scale: {x: 30, y: 30}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -101,11 +101,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0
+        second: .275999993
       data:
         first:
           name: _BumpScale
-        second: -.5
+        second: 1
       data:
         first:
           name: _OcclusionStrength
@@ -113,7 +113,7 @@ Material:
       data:
         first:
           name: _DetailNormalMapScale
-        second: .349999994
+        second: -2.1500001
       data:
         first:
           name: _UVSec
@@ -121,7 +121,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: .0799999982
+        second: 1
       data:
         first:
           name: _Mode
@@ -134,12 +134,12 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: .0416435935, g: .068235293, b: .0660346001, a: .0799999982}
+        second: {r: .404411793, g: .404411793, b: .404411793, a: 1}
       data:
         first:
           name: _Color
-        second: {r: .801470578, g: .620940506, b: .288765132, a: 1}
+        second: {r: .191176474, g: .191176474, b: .191176474, a: 1}
       data:
         first:
           name: _EmissionColorUI
-        second: {r: .520544946, g: .852941155, b: .825432479, a: 1}
+        second: {r: .404411793, g: .404411793, b: .404411793, a: 1}
