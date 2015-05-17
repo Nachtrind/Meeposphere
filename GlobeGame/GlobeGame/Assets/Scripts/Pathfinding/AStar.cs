@@ -9,7 +9,7 @@ public class AStar
 	public List<Vector3>  FindPath (List<Tile> _graph, Tile _start, Tile _end, GameObject _globe)
 	{
 
-		List<Tile> openSet = new List<Tile> ();
+		Heap<Tile> openSet = new Heap<Tile> (_graph.Count);
 		HashSet<Tile> closedSet = new HashSet<Tile> ();
 		List<Vector3> path = new List<Vector3> ();
 
@@ -24,17 +24,7 @@ public class AStar
 				return null;
 			}
 
-			Debug.Log ("Graph length: " + _graph.Count);
-			Tile current = openSet [0];
-			Debug.Log (openSet [0].Neighbours);
-			for (int i = 0; i < openSet.Count; i++) {
-				if (current.FCost () > openSet [i].FCost () || 
-					(current.FCost () == openSet [i].FCost () && openSet [i].HCost < current.HCost)) {
-					current = openSet [i];
-				}
-			}//END for
-
-			openSet.Remove (current);
+			Tile current = openSet.RemoveFirst ();
 			closedSet.Add (current);
 
 			//End is found
@@ -57,6 +47,7 @@ public class AStar
 
 					if (!openSet.Contains (_graph [neigh])) {
 						openSet.Add (_graph [neigh]);
+						openSet.UpdateItem (_graph [neigh]);
 					}
 				}
 			}//foreach

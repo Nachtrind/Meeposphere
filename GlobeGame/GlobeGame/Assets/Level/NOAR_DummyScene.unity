@@ -96,7 +96,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 147583691}
   - 33: {fileID: 147583690}
-  - 136: {fileID: 147583689}
   - 23: {fileID: 147583688}
   - 114: {fileID: 147583694}
   - 114: {fileID: 147583693}
@@ -133,19 +132,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!136 &147583689
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 147583687}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &147583690
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -701,7 +687,6 @@ GameObject:
   - 114: {fileID: 900212173}
   - 114: {fileID: 900212172}
   - 114: {fileID: 900212170}
-  - 135: {fileID: 900212175}
   m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
@@ -801,19 +786,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &900212175
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13593426, guid: 4db7f63e4069d414c9afd6323f21757d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900212169}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 286.660004
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &911726732
 GameObject:
   m_ObjectHideFlags: 0

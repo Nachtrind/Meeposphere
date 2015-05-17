@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class Tile
+public class Tile : IHeapItem<Tile>
 {
 
 	bool walkable;
@@ -17,6 +17,8 @@ public class Tile
 	bool inList;
 	int gCost;
 	int hCost;
+
+	int heapIndex;
 
 	public Tile (Vector3 _worldPos)
 	{
@@ -100,5 +102,22 @@ public class Tile
 		return (gCost + hCost);
 		}
 
+	public int HeapIndex{
+		get {
+			return heapIndex;
+		}
+		set {
+			heapIndex = value;
+		}
+	}
+
+	public int CompareTo(Tile _compTile){
+		int compare = FCost ().CompareTo (_compTile.FCost ());
+		if (compare == 0) {
+			compare = hCost.CompareTo(_compTile.HCost);
+
+		}
+		return -compare;
+	}
 
 	}
