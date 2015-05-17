@@ -100,7 +100,7 @@ public class MarkerUI : MonoBehaviour
 		Vector3 pushDirection = pushImg.transform.position - this.transform.position;
 
 		Vector3 upDir = GetComponentInParent<Transform> ().forward * -1;
-		Debug.DrawRay (this.transform.position, upDir, Color.green, 5.0f);
+		//Debug.DrawRay (this.transform.position, upDir, Color.green, 5.0f);
 		Collider[] hitColliders = Physics.OverlapSphere (this.transform.position, forceRadius);
 
 		pushDirection = pushDirection + upDir.normalized * 5.0f;
