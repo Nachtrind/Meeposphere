@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
 	{
+		DontDestroyOnLoad (this); //saving GM between scenes
 		allMeeples = new List<MeepleController> ();
 		activeMeeples = new List<MeepleController> ();
 

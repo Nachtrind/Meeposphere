@@ -44,6 +44,10 @@ public class MeepleController : MonoBehaviour
 	Utilities help = new Utilities ();
 	bool reachedTarget;
 
+	//Stuff for Pausing, Unpausing
+	Vector3 savedVelocity;
+	Vector3 savedAngularVelocity;
+
 
 
 	// Use this for initialization
@@ -51,6 +55,7 @@ public class MeepleController : MonoBehaviour
 	{
 		mTrans = transform;
 		target = mTrans.position;
+		lastTarget = target;
 
 		rigid = GetComponent<Rigidbody> ();
 		rigid.constraints = RigidbodyConstraints.FreezeRotation;
@@ -145,15 +150,18 @@ public class MeepleController : MonoBehaviour
 		}
 
 		//only check for Meeples
-		int layerMask = 1 << 9;
-		Collider[] hitColliders = Physics.OverlapSphere (mTrans.position, 0.5f, layerMask);
-		if (hitColliders.Length > 0) {
-			foreach (Collider col in hitColliders) {
-				if (!col.transform.GetComponent<MeepleController> ().active) {
-					if (currentPath.Count > 0) {
-						col.transform.GetComponent<MeepleController> ().WakeUp (currentPath [currentPath.Count - 1]);
-					} else {
-						col.transform.GetComponent<MeepleController> ().WakeUp (this.target);
+		if (active) {
+			int layerMask = 1 << 14;
+			Collider[] hitColliders = Physics.OverlapSphere (mTrans.position, 0.5f, layerMask);
+			if (hitColliders.Length > 0) {
+				Debug.Log ("hit meeple");
+				foreach (Collider col in hitColliders) {
+					if (!col.transform.GetComponent<MeepleController> ().active) {
+						if (currentPath.Count > 0) {
+							col.transform.GetComponent<MeepleController> ().WakeUp (currentPath [currentPath.Count - 1]);
+						} else {
+							col.transform.GetComponent<MeepleController> ().WakeUp (this.target);
+						}
 					}
 				}
 			}
@@ -195,7 +203,8 @@ public class MeepleController : MonoBehaviour
 	{
 		Vector3 newDir = new Vector3 (Random.Range (-10.0f, 10.0f), 0.0f, Random.Range (-10.0f, 10.0f)).normalized;
 		target = mTrans.position + newDir * Random.Range (-1.0f, 1.0f);
-		while (Vector3.Distance(target, mTrans.position) > tolerableDistance) {
+		
+		while (Vector3.Distance(lastTarget, mTrans.position) > tolerableDistance) {
 			newDir = new Vector3 (Random.Range (-10.0f, 10.0f), 0.0f, Random.Range (-10.0f, 10.0f)).normalized;
 			target = mTrans.position + newDir * Random.Range (-1.0f, 1.0f);
 		}
@@ -210,6 +219,7 @@ public class MeepleController : MonoBehaviour
 		this.active = true;
 		Tile targetTile = help.GetClickedTile (_target, GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe);
 		this.CalcNewPath (GameManager.Instance.lGraph.WalkableGraph, targetTile, GameManager.Instance.globe);
+		this.gameObject.layer = 9;
 		GameManager.Instance.activeMeeples.Add (this);
 	}
 
@@ -218,6 +228,20 @@ public class MeepleController : MonoBehaviour
 		gotPushed = true;
 		SetPaniced ();
 		pushTimer = 0.0f;
+	}
+
+	public void Pause ()
+	{
+		savedVelocity = rigid.velocity;
+		savedAngularVelocity = rigid.angularVelocity;
+		rigid.isKinematic = true;
+	}
+
+	public void Resume ()
+	{
+		rigid.isKinematic = false;
+		rigid.AddForce (savedVelocity, ForceMode.VelocityChange);
+		rigid.AddTorque (savedAngularVelocity, ForceMode.VelocityChange);
 	}
 
 	private void SetPaniced ()
@@ -254,6 +278,7 @@ public class MeepleController : MonoBehaviour
 
 		if (Physics.Raycast (mTrans.position + (mTrans.up * 0.5f), mTrans.up * -1.0f, out hit, 1.0f)) {
 			target = mTrans.position;
+			lastTarget = mTrans.position;
 			grounded = true;
 			Debug.Log ("GROUNDED!");
 		}

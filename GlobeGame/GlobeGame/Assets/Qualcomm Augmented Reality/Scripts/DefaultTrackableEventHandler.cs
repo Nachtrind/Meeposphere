@@ -5,15 +5,22 @@ Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
 ==============================================================================*/
 
 using UnityEngine;
+using System.Collections.Generic;
+
 
 namespace Vuforia
 {
+
     /// <summary>
     /// A custom handler that implements the ITrackableEventHandler interface.
     /// </summary>
     public class DefaultTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
+
+		public string globeTrackerName;
+		public string markerTrackerName;
+
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
@@ -83,6 +90,14 @@ namespace Vuforia
                 component.enabled = true;
             }
 
+			if (mTrackableBehaviour.TrackableName.Equals (globeTrackerName)) {
+				List<MeepleController> meeples = GameManager.Instance.allMeeples;
+				foreach(MeepleController meep in meeples){
+					meep.Resume();
+				}
+			}
+
+
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
 
@@ -103,6 +118,14 @@ namespace Vuforia
             {
                 component.enabled = false;
             }
+
+			if (mTrackableBehaviour.TrackableName.Equals (globeTrackerName)) {
+				List<MeepleController> meeples = GameManager.Instance.allMeeples;
+				foreach(MeepleController meep in meeples){
+					meep.Pause();
+									}
+			}
+
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
