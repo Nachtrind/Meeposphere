@@ -28,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.495, y: 4.28000021, z: -.971000016}
-  m_LocalScale: {x: .0908115655, y: .0908116102, z: .0908116102}
+  m_LocalPosition: {x: 8.24182892, y: 13.6365232, z: 7.92910385}
+  m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_asleep: {fileID: 2100000, guid: ad7a51a4f414dd84c9535eba0f8d3ded, type: 2}
   m_panic: {fileID: 2100000, guid: 5af534bbdb17cba4cb87c432ef0c29ae, type: 2}
   m_dead: {fileID: 2100000, guid: a6269efd206b185468034c224ee73ad2, type: 2}
+  tolerableDistance: 1.5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

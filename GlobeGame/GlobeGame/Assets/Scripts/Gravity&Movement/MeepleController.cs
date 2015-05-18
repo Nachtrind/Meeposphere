@@ -27,7 +27,7 @@ public class MeepleController : MonoBehaviour
 
 	//Stuff for moving around
 	float acceptableDistance = 0.2f;
-	float tolerableDistance = 1.0f;
+	public float tolerableDistance = 1.5f;
 	float speed;
 	float walkSpeed = 6.5f;
 	float idleSpeed = 1.5f;
@@ -202,12 +202,18 @@ public class MeepleController : MonoBehaviour
 	private void FindRandomPoint ()
 	{
 		Vector3 newDir = new Vector3 (Random.Range (-10.0f, 10.0f), 0.0f, Random.Range (-10.0f, 10.0f)).normalized;
-		target = mTrans.position + newDir * Random.Range (-1.0f, 1.0f);
-		
-		while (Vector3.Distance(lastTarget, mTrans.position) > tolerableDistance) {
+		Vector3 newTarget = mTrans.position + newDir * Random.Range (-1.2f, 1.2f);
+		Tile targetTile = help.GetClickedTile (newTarget, GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe);
+		newTarget = targetTile.WorldPos;
+		float distance = Vector3.Distance (lastTarget, newTarget);
+		while (distance > tolerableDistance || !targetTile.Walkable) {
+
 			newDir = new Vector3 (Random.Range (-10.0f, 10.0f), 0.0f, Random.Range (-10.0f, 10.0f)).normalized;
-			target = mTrans.position + newDir * Random.Range (-1.0f, 1.0f);
+			newTarget = mTrans.position + newDir * Random.Range (-1.2f, 1.2f);
+			newTarget = help.GetClickedTile (newTarget, GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe).WorldPos;
+			distance = Vector3.Distance (lastTarget, newTarget);
 		}
+		target = newTarget;
 		mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 		reachedTarget = false;
 

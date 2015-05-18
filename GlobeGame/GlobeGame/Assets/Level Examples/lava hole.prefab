@@ -12,7 +12,6 @@ GameObject:
   - 23: {fileID: 2339136}
   - 95: {fileID: 9538794}
   - 135: {fileID: 13562528}
-  - 114: {fileID: 11446796}
   - 108: {fileID: 10807136}
   m_Layer: 0
   m_Name: lava hole
@@ -28,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152874}
   m_LocalRotation: {x: .584845841, y: 0, z: 0, w: .811144531}
-  m_LocalPosition: {x: -16.5, y: 48.9500008, z: 13.7600002}
-  m_LocalScale: {x: 31, y: 46.9000015, z: 31}
+  m_LocalPosition: {x: 45.6199989, y: -8.35999966, z: -21}
+  m_LocalScale: {x: 30.9999886, y: 31.0000153, z: 31.0000153}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,18 +112,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11446796
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a2416c1454840479615cd0e91b0150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: -10
 --- !u!135 &13562528
 SphereCollider:
   m_ObjectHideFlags: 1

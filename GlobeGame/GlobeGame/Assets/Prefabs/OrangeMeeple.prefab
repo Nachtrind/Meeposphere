@@ -12,7 +12,6 @@ GameObject:
   - 23: {fileID: 2390958}
   - 114: {fileID: 11451558}
   - 54: {fileID: 5438642}
-  - 114: {fileID: 11403946}
   - 33: {fileID: 3370384}
   m_Layer: 9
   m_Name: OrangeMeeple
@@ -20,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &423826
 Transform:
   m_ObjectHideFlags: 1
@@ -28,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.512000024, y: 4.28100014, z: -.75}
+  m_LocalPosition: {x: -.50999999, y: 4.28000021, z: -1.04999995}
   m_LocalScale: {x: .0908115655, y: .0908116102, z: .0908116102}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,19 +90,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.29999995, y: 0, z: 1.29999995}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11403946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111688}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f843e8ea1182d4f498fa66469078516d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globe: {fileID: 0}
-  testMeeple: {fileID: 111688}
 --- !u!114 &11451558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +104,7 @@ MonoBehaviour:
   gravity: {fileID: 0}
   rigid: {fileID: 0}
   active: 1
-  idle: 0
+  idle: 1
   gotPushed: 0
   m_active: {fileID: 2100000, guid: 8510901ccd1e85f4c9234dd0e3af8a95, type: 2}
   m_asleep: {fileID: 2100000, guid: ad7a51a4f414dd84c9535eba0f8d3ded, type: 2}

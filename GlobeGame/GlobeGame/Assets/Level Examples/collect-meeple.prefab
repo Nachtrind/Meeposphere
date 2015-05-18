@@ -12,24 +12,22 @@ GameObject:
   - 65: {fileID: 6514524}
   - 23: {fileID: 2314862}
   - 54: {fileID: 5416382}
-  - 114: {fileID: 11473588}
-  - 114: {fileID: 11410786}
   m_Layer: 0
   m_Name: collect-meeple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &438202
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164678}
-  m_LocalRotation: {x: 0, y: -.8246696, z: 0, w: .56561476}
-  m_LocalPosition: {x: 19.4075584, y: -14.0412092, z: -.949935973}
-  m_LocalScale: {x: .0187092572, y: .018709261, z: .0187092572}
+  m_LocalRotation: {x: .0141204707, y: -.779327869, z: -.348697126, w: .520441234}
+  m_LocalPosition: {x: 17.8799992, y: -21.7900047, z: 4.95000029}
+  m_LocalScale: {x: .240000069, y: .239999995, z: .240000054}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 781f3e62d33054859bca5af14018ad60, type: 2}
+  - {fileID: 2100000, guid: 9ec8e64d702824c3da884e1e086744fd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -91,30 +89,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11410786
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164678}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f84cf93738d7f2142acfac8dc5271965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11473588
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164678}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da4f1f2dcd228e4f8054a676310513a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravity: {fileID: 0}
-  rigid: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
