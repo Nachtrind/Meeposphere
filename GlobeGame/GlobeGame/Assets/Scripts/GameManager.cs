@@ -36,7 +36,11 @@ public class GameManager : MonoBehaviour
 		}
 
 		globe = GameObject.FindGameObjectsWithTag ("Globe") [0];
-		lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
+		//Level2
+		lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/Level2.lg");
+		//DummyLevel
+		//lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
+
 	
 	
 		//Set Main Camera

@@ -26,8 +26,8 @@ public class MeepleController : MonoBehaviour
 	Vector3 pushback;
 
 	//Stuff for moving around
-	float acceptableDistance = 0.2f;
-	public float tolerableDistance = 1.5f;
+	public float acceptableDistance = 1.0f;
+	public float tolerableDistance = 3.0f;
 	float speed;
 	float walkSpeed = 6.5f;
 	float idleSpeed = 1.5f;
@@ -48,8 +48,19 @@ public class MeepleController : MonoBehaviour
 	Vector3 savedVelocity;
 	Vector3 savedAngularVelocity;
 
-
-
+	void OnDrawGizmos ()
+	{
+		/*
+		foreach (Vector3 vec in currentPath) {
+			Gizmos.color = Color.green;
+			Gizmos.DrawSphere (vec, 0.3f);
+		}
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawSphere (target, 0.3f);
+		*/
+}
+	
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -64,13 +75,13 @@ public class MeepleController : MonoBehaviour
 		reachedTarget = true;
 
 		//acceptable Distance is Meeple width
-		acceptableDistance = GetComponent<MeshFilter> ().mesh.bounds.size.x * mTrans.localScale.x * 3;
+		//acceptableDistance = GetComponent<MeshFilter> ().mesh.bounds.size.x * mTrans.localScale.x;
 		gotCalledByPlayer = false;
 
 		this.meepleRenderer = GetComponentInChildren<Renderer> ();
 
 		Debug.Log (meepleRenderer);
-		this.FindRandomPoint ();
+		//this.FindRandomPoint ();
 
 		if (active) {
 			this.SetActive ();
@@ -90,7 +101,9 @@ public class MeepleController : MonoBehaviour
 					lastTarget = currentPath [0]; //save target for idle-behaviour
 					currentPath.RemoveAt (0);
 					reachedTarget = false;
-					mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
+					Debug.Log("Set New Step");
+					mTrans.LookAt(target);
+					//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 					gravity.Gravitate (mTrans);
 				} else if (currentPath.Count == 0 && reachedTarget) {
 					gotCalledByPlayer = false;
@@ -101,7 +114,7 @@ public class MeepleController : MonoBehaviour
 			//Idling
 			if (idle && idleTimer > idleTime && reachedTarget) {
 				speed = idleSpeed;
-				this.FindRandomPoint ();
+				//this.FindRandomPoint ();
 				idleTimer = 0.0f;
 
 			} else if (!gotCalledByPlayer) {
@@ -130,8 +143,10 @@ public class MeepleController : MonoBehaviour
 			if (!gotPushed) {
 				if (gotCalledByPlayer || idle) {
 					if (currentDistance > acceptableDistance) {
+						//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 						rigid.MovePosition (mTrans.position + mTrans.forward * speed * Time.deltaTime);
 					} else {
+						Debug.Log("Reached Target");
 						reachedTarget = true;
 					}
 				}
