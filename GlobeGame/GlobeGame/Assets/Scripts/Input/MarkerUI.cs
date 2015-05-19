@@ -109,7 +109,7 @@ public class MarkerUI : MonoBehaviour
 		pushDirection = pushDirection + upDir.normalized * 5.0f;
 		foreach (Collider col in hitColliders) {
 			if (col.tag.Equals ("Meeple")) {
-				Debug.Log("Col was Meeple");
+//				Debug.Log("Col was Meeple");
 				col.attachedRigidbody.AddForce (pushDirection.normalized * force, ForceMode.Impulse);
 				col.GetComponentInParent<MeepleController> ().PushedAway ();
 			}

@@ -10,6 +10,7 @@ TagManager:
   - movingStone
   - Hole
   - Savepoint
+  - death
   layers:
   - Default
   - TransparentFX

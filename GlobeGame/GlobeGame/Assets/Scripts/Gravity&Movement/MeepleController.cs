@@ -9,6 +9,7 @@ public class MeepleController : MonoBehaviour
 	public Rigidbody rigid;
 	public bool active;
 	public bool idle;
+	bool dead;
 
 	//Stuff after being pushed
 	public bool gotPushed;
@@ -58,7 +59,7 @@ public class MeepleController : MonoBehaviour
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawSphere (target, 0.3f);
 		*/
-}
+	}
 	
 	
 	// Use this for initialization
@@ -89,11 +90,13 @@ public class MeepleController : MonoBehaviour
 			this.SetAsleep ();
 		}
 
+		dead = false;
+
 	}
 
 	void Update ()
 	{
-		if (!gotPushed) {
+		if (!gotPushed && !dead) {
 			//Pathfollowing
 			if (currentPath != null) {
 				if (currentPath.Count > 0 && reachedTarget) {
@@ -101,8 +104,8 @@ public class MeepleController : MonoBehaviour
 					lastTarget = currentPath [0]; //save target for idle-behaviour
 					currentPath.RemoveAt (0);
 					reachedTarget = false;
-					Debug.Log("Set New Step");
-					mTrans.LookAt(target);
+//					Debug.Log("Set New Step");
+					mTrans.LookAt (target);
 					//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 					gravity.Gravitate (mTrans);
 				} else if (currentPath.Count == 0 && reachedTarget) {
@@ -121,8 +124,7 @@ public class MeepleController : MonoBehaviour
 				idleTimer += Time.deltaTime;
 			}
 		} else if (pushTimer > pushTime) {
-			Debug.Log ("Check Ground");
-			if (IsGrounded ()) {
+			if (IsGrounded () && !dead) {
 				gotPushed = false;
 				SetActive ();
 			}
@@ -139,7 +141,7 @@ public class MeepleController : MonoBehaviour
 
 		gravity.Gravitate (mTrans);
 		float currentDistance = Vector3.Distance (mTrans.position, target);
-		if (!hitObstacle) {
+		if (!hitObstacle && !dead) {
 			if (!gotPushed) {
 				if (gotCalledByPlayer || idle) {
 					if (currentDistance > acceptableDistance) {
@@ -153,7 +155,7 @@ public class MeepleController : MonoBehaviour
 		} else {
 			if (obstacleTimer > 0.5f) {
 				hitObstacle = false;
-				if (currentDistance < tolerableDistance) {
+				if (currentDistance < tolerableDistance && !dead) {
 					target = transform.position;
 					this.SetActive ();
 				}
@@ -293,17 +295,29 @@ public class MeepleController : MonoBehaviour
 
 		bool grounded = false;
 
-		Debug.DrawRay (mTrans.position, mTrans.up * -1.0f, Color.red, 4.0f);
+		Debug.DrawRay (mTrans.position + (mTrans.up * 1.0f), mTrans.up * -1.0f, Color.red, 20.0f);
 		RaycastHit hit;
 
-		if (Physics.Raycast (mTrans.position + (mTrans.up * 0.5f), mTrans.up * -1.0f, out hit, 1.0f)) {
+		if (Physics.Raycast (mTrans.position + (mTrans.up * 1.0f), mTrans.up * -1.0f, out hit, 1.0f)) {
 			target = mTrans.position;
 			lastTarget = mTrans.position;
 			grounded = true;
-			Debug.Log ("GROUNDED!");
+			Debug.Log ("Is Grounded");
 		}
 		return grounded;
 	}
 
+	private void Dead(){
+		this.SetDead();
+		dead = true;
+	}
+
+	void OnCollisionEnter (Collision collision)
+	{
+		if (collision.transform.tag.Equals ("death")) {
+			this.Dead();
+		}
+		
+	}
 
 }
