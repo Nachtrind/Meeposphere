@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b9d9e3b6ede13e54684b3530cf210d7f
-timeCreated: 1431792884
+guid: 35a5954f552d2ea4f9124e50e6cc12bc
+timeCreated: 1432026964
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube1
+    4300000: PM3D_Cone3D_1
   materials:
     importMaterials: 1
     materialName: 0
