@@ -19,7 +19,7 @@ public class MarkerUI : MonoBehaviour
 	Image arrowImg;
 	Vector3 center;
 	float radius;
-	public float forceRadius = 2.2f;
+	public float forceRadius = 6.0f;
 	Vector3 target;
 
 	// Update is called once per frame
@@ -47,8 +47,9 @@ public class MarkerUI : MonoBehaviour
 			}
 		}
 		radius = Vector3.Distance (new Vector3 (0, 0, 0), pushImg.rectTransform.anchoredPosition3D);
-		force = 8.0f;
-		forceRadius = 2.2f;
+		Debug.Log (radius);		
+		force = 11.5f;
+		forceRadius = 6.0f;
 	}
 
 	// Update is called once per frame
@@ -88,6 +89,8 @@ public class MarkerUI : MonoBehaviour
 	public void CallMeeples ()
 	{
 		foreach (MeepleController meeple in GameManager.Instance.activeMeeples) {
+			Debug.Log(this.helper.GetClickedTile (this.transform.position, 
+			                                      GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe).WorldPos);
 			meeple.CalcNewPath (GameManager.Instance.lGraph.WalkableGraph, 
 			                    this.helper.GetClickedTile (this.transform.position, 
 			                            GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe), 
@@ -104,9 +107,9 @@ public class MarkerUI : MonoBehaviour
 		Collider[] hitColliders = Physics.OverlapSphere (this.transform.position, forceRadius);
 
 		pushDirection = pushDirection + upDir.normalized * 5.0f;
-
 		foreach (Collider col in hitColliders) {
 			if (col.tag.Equals ("Meeple")) {
+				Debug.Log("Col was Meeple");
 				col.attachedRigidbody.AddForce (pushDirection.normalized * force, ForceMode.Impulse);
 				col.GetComponentInParent<MeepleController> ().PushedAway ();
 			}

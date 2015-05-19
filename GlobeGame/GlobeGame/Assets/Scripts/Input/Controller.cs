@@ -27,8 +27,8 @@ public class Controller : MonoBehaviour
 				this.arCam = cam;
 			}
 		}
-
-		/*lGraph = world.CreateLevelGraph (globe);
+		/*
+		lGraph = world.CreateLevelGraph (globe);
 		Debug.Log (lGraph.BasicGraph.Count);
 		help.SaveLevelGraph (lGraph, Application.dataPath + "/Scripts/Pathfinding/Level2.lg");
 		Debug.Log ("Loading from: " + Application.dataPath +"/Scripts/Pathfinding/Level2.lg");

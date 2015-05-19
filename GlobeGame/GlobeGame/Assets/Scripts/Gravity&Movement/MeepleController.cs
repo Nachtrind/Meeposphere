@@ -146,7 +146,6 @@ public class MeepleController : MonoBehaviour
 						//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 						rigid.MovePosition (mTrans.position + mTrans.forward * speed * Time.deltaTime);
 					} else {
-						Debug.Log("Reached Target");
 						reachedTarget = true;
 					}
 				}

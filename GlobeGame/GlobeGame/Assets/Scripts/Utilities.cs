@@ -130,9 +130,10 @@ public class Utilities
 	public Tile GetClickedTile (Vector3 _clickHit, List<Tile> _tiles, GameObject _world)
 	{
 		Vector3 tilePos = this.NearestVertexTo (_clickHit, _world);
-
+		Debug.Log ("Nearest Vertex: " + tilePos);
 		foreach (Tile t in _tiles) {
 			if (t.WorldPos == tilePos) {
+				Debug.Log("Tile Pos" + t.WorldPos);
 				return t;
 			}
 		}
