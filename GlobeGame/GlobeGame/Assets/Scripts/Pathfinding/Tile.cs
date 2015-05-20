@@ -1,30 +1,47 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
 
-[System.Serializable]
 public class Tile : IHeapItem<Tile>
 {
 
 	bool walkable;
-	float x;
-	float y;
-	float z;
+
+	[XmlElement]
+	public string xS;
+	[XmlElement]
+	string yS;
+	[XmlElement]
+	string zS;
 	List<int> neighbours = new List<int> ();
 	int mode;
-
 	Tile parent;
 	bool inList;
 	int gCost;
 	int hCost;
-
 	int heapIndex;
+
+	float x;
+	float y;
+	float z;
+
+	public Tile ()
+	{
+
+	}
 
 	public Tile (Vector3 _worldPos)
 	{
 		this.x = _worldPos.x;
 		this.y = _worldPos.y;
 		this.z = _worldPos.z;
+
+		MakeStrings ();
+		
 		inList = false;
 	}
 
@@ -39,6 +56,11 @@ public class Tile : IHeapItem<Tile>
 
 	public Vector3 WorldPos {
 		get {
+
+				x = float.Parse(this.xS);
+				y = float.Parse(this.yS);
+				z = float.Parse(this.zS);
+
 			return new Vector3 (x, y, z);
 		}
 	}
@@ -57,7 +79,7 @@ public class Tile : IHeapItem<Tile>
 			return parent;
 		}
 
-		set{
+		set {
 			parent = value;
 		}
 	}
@@ -66,7 +88,7 @@ public class Tile : IHeapItem<Tile>
 		get {
 			return inList;
 		}
-		set{
+		set {
 			inList = value;
 		}
 	}
@@ -75,7 +97,7 @@ public class Tile : IHeapItem<Tile>
 		get {
 			return mode;
 		}
-		set{
+		set {
 			mode = value;
 		}
 	}
@@ -84,7 +106,7 @@ public class Tile : IHeapItem<Tile>
 		get {
 			return gCost;
 		}
-		set{
+		set {
 			gCost = value;
 		}
 	}
@@ -98,11 +120,12 @@ public class Tile : IHeapItem<Tile>
 		}
 	}
 
-	public int FCost(){
+	public int FCost ()
+	{
 		return (gCost + hCost);
-		}
+	}
 
-	public int HeapIndex{
+	public int HeapIndex {
 		get {
 			return heapIndex;
 		}
@@ -111,13 +134,49 @@ public class Tile : IHeapItem<Tile>
 		}
 	}
 
-	public int CompareTo(Tile _compTile){
+	public string Xs {
+		get {
+			return this.xS;
+		}
+		set {
+			xS = value;
+		}
+	}
+
+	public string Ys {
+		get {
+			return this.yS;
+		}
+		set {
+			yS = value;
+		}
+	}
+
+	public string Zs {
+		get {
+			return this.zS;
+		}
+		set {
+			zS = value;
+		}
+	}
+
+
+	public void MakeStrings ()
+	{
+		this.xS = this.x.ToString ();
+		this.yS = this.y.ToString ();
+		this.zS = this.z.ToString ();
+	}
+
+	public int CompareTo (Tile _compTile)
+	{
 		int compare = FCost ().CompareTo (_compTile.FCost ());
 		if (compare == 0) {
-			compare = hCost.CompareTo(_compTile.HCost);
+			compare = hCost.CompareTo (_compTile.HCost);
 
 		}
 		return -compare;
 	}
 
-	}
+}

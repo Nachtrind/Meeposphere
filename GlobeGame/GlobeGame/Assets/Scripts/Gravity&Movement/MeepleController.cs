@@ -49,17 +49,17 @@ public class MeepleController : MonoBehaviour
 	Vector3 savedVelocity;
 	Vector3 savedAngularVelocity;
 
+	/*
 	void OnDrawGizmos ()
 	{
-		/*
 		foreach (Vector3 vec in currentPath) {
 			Gizmos.color = Color.green;
 			Gizmos.DrawSphere (vec, 0.3f);
 		}
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawSphere (target, 0.3f);
-		*/
-	}
+
+	}*/
 	
 	
 	// Use this for initialization
@@ -105,7 +105,6 @@ public class MeepleController : MonoBehaviour
 					currentPath.RemoveAt (0);
 					reachedTarget = false;
 //					Debug.Log("Set New Step");
-					mTrans.LookAt (target);
 					//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 					gravity.Gravitate (mTrans);
 				} else if (currentPath.Count == 0 && reachedTarget) {
@@ -139,13 +138,12 @@ public class MeepleController : MonoBehaviour
 	void FixedUpdate ()
 	{
 
-		gravity.Gravitate (mTrans);
 		float currentDistance = Vector3.Distance (mTrans.position, target);
+		mTrans.LookAt (target);
 		if (!hitObstacle && !dead) {
 			if (!gotPushed) {
 				if (gotCalledByPlayer || idle) {
 					if (currentDistance > acceptableDistance) {
-						//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 						rigid.MovePosition (mTrans.position + mTrans.forward * speed * Time.deltaTime);
 					} else {
 						reachedTarget = true;
@@ -200,6 +198,9 @@ public class MeepleController : MonoBehaviour
 			
 			}
 		}*/
+
+		
+		gravity.Gravitate (mTrans);
 	}
 
 	public void CalcNewPath (List<Tile> _graph, Tile _end, GameObject _globe)
@@ -210,7 +211,7 @@ public class MeepleController : MonoBehaviour
 		gotCalledByPlayer = true;
 		idle = false;
 		reachedTarget = false;
-		mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
+		mTrans.LookAt (target);;
 		gravity.Gravitate (mTrans);
 		speed = walkSpeed;
 	}
@@ -230,7 +231,7 @@ public class MeepleController : MonoBehaviour
 			distance = Vector3.Distance (lastTarget, newTarget);
 		}
 		target = newTarget;
-		mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
+		//mTrans.rotation = Quaternion.LookRotation (target, mTrans.up);
 		reachedTarget = false;
 
 	}
@@ -307,15 +308,16 @@ public class MeepleController : MonoBehaviour
 		return grounded;
 	}
 
-	private void Dead(){
-		this.SetDead();
+	private void Dead ()
+	{
+		this.SetDead ();
 		dead = true;
 	}
 
 	void OnCollisionEnter (Collision collision)
 	{
 		if (collision.transform.tag.Equals ("death")) {
-			this.Dead();
+			this.Dead ();
 		}
 		
 	}

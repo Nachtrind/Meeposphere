@@ -2,15 +2,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml;
+using System.Xml.Serialization;
 using System.IO;
 
 public class Utilities
 {
 
+	public LevelGraph LoadXMLFile (string _path)
+	{
+		/*
+		var serializer = new XmlSerializer (typeof(LevelGraph));
+		Resources.Load (_path);
+		using (var stream = new FileStream(_path, FileMode.Open)) {
+			return serializer.Deserialize (stream) as LevelGraph;
+		}*/
 
+		TextAsset _xml = new TextAsset();
+		_xml = (TextAsset)Resources.Load("Level2X-8", typeof(TextAsset));
+		XmlDocument xmldoc = new XmlDocument ();
+		xmldoc.LoadXml (_xml.text);
+
+
+		XmlSerializer serializer = new XmlSerializer(typeof(LevelGraph));
+		XmlReader reader = XmlReader.Create (new StringReader (_xml.text));
+		LevelGraph lGraph = (LevelGraph) serializer.Deserialize (reader);
+
+		return lGraph;
+	}
+
+	public void SaveXMLFile(string _path, LevelGraph _graph)
+	{
+		var serializer = new XmlSerializer (typeof(LevelGraph));
+		using (var stream = new FileStream(_path, FileMode.Create)) {
+			serializer.Serialize (stream, _graph);
+		}
+	}
+	
 	public void SaveLevelGraph (LevelGraph _graph, string _path)
 	{
-
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file = File.Create (_path);
 		bf.Serialize (file, _graph);
@@ -65,10 +95,10 @@ public class Utilities
 			returnGraph = (LevelGraph)bf.Deserialize (file);
 			file.Close ();
 		} else {
-			Debug.LogError("PATH DOESN'T EXIST");
+			Debug.LogError ("PATH DOESN'T EXIST");
 		}
 
-		returnGraph = Resources.LoadAssetAtPath (_path, LevelGraph);
+//		returnGraph = Resources.LoadAssetAtPath (_path, LevelGraph);
 
 		return returnGraph;
 	}
