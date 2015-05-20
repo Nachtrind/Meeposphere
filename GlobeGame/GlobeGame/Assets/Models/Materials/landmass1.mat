@@ -9,7 +9,7 @@ Material:
   m_Name: landmass1
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
-  m_LightmapFlags: 1
+  m_LightmapFlags: 2
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -20,7 +20,7 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 4, y: 4}
-          m_Offset: {x: 1.04030073, y: 1.04030073}
+          m_Offset: {x: .67232573, y: .67232573}
       data:
         first:
           name: _BumpMap
@@ -69,7 +69,7 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 3, y: 3}
-          m_Offset: {x: 3.1209023, y: 3.1209023}
+          m_Offset: {x: 2.01697707, y: 2.01697707}
       data:
         first:
           name: _MetallicGlossMap
