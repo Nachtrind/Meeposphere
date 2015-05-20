@@ -68,7 +68,7 @@ public class Utilities
 			Debug.LogError("PATH DOESN'T EXIST");
 		}
 
-		returnGraph = Resources.LoadAssetAtPath (_path, LevelGraph);
+//		returnGraph = Resources.LoadAssetAtPath (_path,typeof(LevelGraph)) as LevelGraph;
 
 		return returnGraph;
 	}
