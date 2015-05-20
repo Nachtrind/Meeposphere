@@ -8,8 +8,8 @@ public class World
 
 	Utilities help = new Utilities ();
 	float toAdd = 0.0f;
-	float angleToAdd = 90.0f;
-	int neighboursToCheck = 4;
+	float angleToAdd = 45.0f;
+	int neighboursToCheck = 8;
 
 	public List<Tile> GenerateWalkables (LevelGraph _graph, GameObject _world)
 	{

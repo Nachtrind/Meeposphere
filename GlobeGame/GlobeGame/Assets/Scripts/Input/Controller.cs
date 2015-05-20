@@ -27,8 +27,8 @@ public class Controller : MonoBehaviour
 				this.arCam = cam;
 			}
 		}
-		/*
-		lGraph = world.CreateLevelGraph (globe);
+
+		/*lGraph = world.CreateLevelGraph (globe);
 		Debug.Log (lGraph.BasicGraph.Count);
 		help.SaveLevelGraph (lGraph, Application.dataPath + "/Scripts/Pathfinding/Level2.lg");
 		Debug.Log ("Loading from: " + Application.dataPath +"/Scripts/Pathfinding/Level2.lg");
@@ -39,6 +39,12 @@ public class Controller : MonoBehaviour
 		walkables = world.GenerateWalkables (lGraph, globe);
 		lGraph.WalkableGraph = walkables;
 		help.SaveLevelGraph (lGraph, Application.dataPath + "/Scripts/Pathfinding/Level2.lg");*/
+
+		lGraph = world.CreateLevelGraph (globe);
+		walkables = world.GenerateWalkables (lGraph, globe);
+		help.SaveXMLFile (Application.dataPath + "/Scripts/Pathfinding/Level2X-8.xml", lGraph);
+		Debug.Log (lGraph.BasicGraph.Count);
+		Debug.Log (lGraph.WalkableGraph.Count);
 	}
 	
 	// Update is called once per frame

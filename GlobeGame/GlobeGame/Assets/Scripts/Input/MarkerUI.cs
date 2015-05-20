@@ -89,8 +89,8 @@ public class MarkerUI : MonoBehaviour
 	public void CallMeeples ()
 	{
 		foreach (MeepleController meeple in GameManager.Instance.activeMeeples) {
-			Debug.Log(this.helper.GetClickedTile (this.transform.position, 
-			                                      GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe).WorldPos);
+//			Debug.Log(this.helper.GetClickedTile (this.transform.position, 
+//			                                      GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe).WorldPos);
 			meeple.CalcNewPath (GameManager.Instance.lGraph.WalkableGraph, 
 			                    this.helper.GetClickedTile (this.transform.position, 
 			                            GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe), 

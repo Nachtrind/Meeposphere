@@ -37,8 +37,11 @@ public class GameManager : MonoBehaviour
 
 		globe = GameObject.FindGameObjectsWithTag ("Globe") [0];
 		//Level2
-		lGraph = help.LoadLevelGraph (globe, "Level2.lg");
+		lGraph = help.LoadXMLFile ("Level2X-8.xml");
+		Debug.Log ("Loaded Graph");
 		Debug.Log (lGraph.WalkableGraph.Count);
+		Debug.Log (lGraph.WalkableGraph[0].xS);
+		Debug.Log (lGraph.WalkableGraph [10].WorldPos);
 		//DummyLevel
 		//lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 
