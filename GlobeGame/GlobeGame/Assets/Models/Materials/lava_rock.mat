@@ -32,7 +32,7 @@ Material:
         first:
           name: _DetailNormalMap
         second:
-          m_Texture: {fileID: 2800000, guid: cae6fa73cb6478449b25ef09ca707cd2, type: 3}
+          m_Texture: {fileID: 2800000, guid: d9a3f32b4257b574c80b30689bbb83b8, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -113,7 +113,7 @@ Material:
       data:
         first:
           name: _DetailNormalMapScale
-        second: .189999998
+        second: .25
       data:
         first:
           name: _UVSec
