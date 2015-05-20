@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 	public Camera arCam;
 	Utilities help = new Utilities ();
 
+	public bool placingMarker;
+
 	public static GameManager Instance {
 		get { return instance ?? (instance = new GameObject ("GameManager").AddComponent<GameManager> ()); }
 	}
@@ -38,10 +40,10 @@ public class GameManager : MonoBehaviour
 		globe = GameObject.FindGameObjectsWithTag ("Globe") [0];
 		//Level2
 		lGraph = help.LoadXMLFile ("Level2X-8.xml");
-		Debug.Log ("Loaded Graph");
-		Debug.Log (lGraph.WalkableGraph.Count);
-		Debug.Log (lGraph.WalkableGraph[0].xS);
-		Debug.Log (lGraph.WalkableGraph [10].WorldPos);
+//		Debug.Log ("Loaded Graph");
+//		Debug.Log (lGraph.WalkableGraph.Count);
+//		Debug.Log (lGraph.WalkableGraph[0].xS);
+//		Debug.Log (lGraph.WalkableGraph [10].WorldPos);
 		//DummyLevel
 		//lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 
@@ -62,5 +64,7 @@ public class GameManager : MonoBehaviour
 	{
 		
 	}
+
+
 
 }

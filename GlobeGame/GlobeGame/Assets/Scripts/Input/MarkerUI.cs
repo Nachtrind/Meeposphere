@@ -47,7 +47,7 @@ public class MarkerUI : MonoBehaviour
 			}
 		}
 		radius = Vector3.Distance (new Vector3 (0, 0, 0), pushImg.rectTransform.anchoredPosition3D);
-		Debug.Log (radius);		
+//		Debug.Log (radius);		
 		force = 11.5f;
 		forceRadius = 6.0f;
 	}
