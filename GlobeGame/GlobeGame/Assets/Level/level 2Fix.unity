@@ -140,7 +140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 71
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -373,7 +373,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 57
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_LocalScale.x
@@ -473,43 +473,59 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 437441460}
     m_Modifications:
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -37.2235374
+      value: 14.8893337
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.1206274
+      value: -24.0807037
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -27.3605156
+      value: .329961747
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.598740339
+      value: -.858101249
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .300025314
+      value: .506698787
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .416554958
+      value: .0823989138
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .614798248
+      value: .0113546541
       objectReference: {fileID: 0}
     - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .135156542
+      objectReference: {fileID: 0}
+    - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .135156512
+      objectReference: {fileID: 0}
+    - target: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .135156587
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &96051870 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 482192, guid: 4bc9d96884fedc24a9b73928230b01b5, type: 2}
+  m_PrefabInternal: {fileID: 96051869}
 --- !u!1001 &96663850
 Prefab:
   m_ObjectHideFlags: 0
@@ -685,7 +701,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1158,7 +1174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 94
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_LocalScale.x
@@ -1729,7 +1745,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 91
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_LocalScale.x
@@ -1791,7 +1807,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 70
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -2279,7 +2295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 99
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -2425,7 +2441,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2881,7 +2897,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -3251,7 +3267,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_LocalScale.x
@@ -3595,7 +3611,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4182,7 +4198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_RootOrder
-      value: 87
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_Name
@@ -4962,11 +4978,14 @@ Transform:
   - {fileID: 1368521225}
   - {fileID: 1141757709}
   - {fileID: 1917934891}
+  - {fileID: 1238251016}
   - {fileID: 350178424}
   - {fileID: 1445491770}
-  - {fileID: 1238251016}
   - {fileID: 1191385703}
   - {fileID: 1830555710}
+  - {fileID: 1939815052}
+  - {fileID: 96051870}
+  - {fileID: 2106955101}
   m_Father: {fileID: 2119570542}
   m_RootOrder: 0
 --- !u!1 &444547719 stripped
@@ -5124,7 +5143,7 @@ Transform:
   - {fileID: 1230553924}
   - {fileID: 1352696139}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!54 &481302426
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5464,7 +5483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5622,7 +5641,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5726,7 +5745,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_RootOrder
-      value: 63
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_Name
@@ -5810,7 +5829,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6317,7 +6336,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6387,7 +6406,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467152, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
       propertyPath: m_RootOrder
-      value: 83
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
       propertyPath: m_Name
@@ -6535,7 +6554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_Name
@@ -7001,7 +7020,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7061,7 +7080,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7191,7 +7210,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7341,7 +7360,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7535,7 +7554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 60
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7962,7 +7981,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -8160,7 +8179,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 97
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_LocalScale.x
@@ -8218,19 +8237,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: .0258999486
+      value: .0258999504
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: .513875782
+      value: .513875842
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -.591055274
+      value: -.591055334
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: .621220171
+      value: .621220231
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
@@ -8322,7 +8341,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -8364,7 +8383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467152, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
       propertyPath: m_RootOrder
-      value: 66
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 467152, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
       propertyPath: m_LocalScale.x
@@ -8662,7 +8681,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -8704,7 +8723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 74
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -9143,7 +9162,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 65
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -9209,7 +9228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9359,7 +9378,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9537,7 +9556,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9937,7 +9956,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_Name
@@ -10021,7 +10040,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10207,7 +10226,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_RootOrder
-      value: 102
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_Name
@@ -10375,7 +10394,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10417,7 +10436,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5166e7df378c8a428d0915a300ea47c, type: 3}
       propertyPath: m_RootOrder
-      value: 75
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5166e7df378c8a428d0915a300ea47c, type: 3}
       propertyPath: m_LocalScale.z
@@ -10529,7 +10548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -10735,7 +10754,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_Name
@@ -10801,7 +10820,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11029,7 +11048,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11098,7 +11117,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 61
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11168,7 +11187,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_RootOrder
-      value: 103
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_LocalScale.x
@@ -11404,7 +11423,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11554,7 +11573,7 @@ Transform:
   m_LocalScale: {x: .962548494, y: .962548375, z: .962548375}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!1 &1101065526 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
@@ -11674,7 +11693,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 59
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11762,7 +11781,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11874,7 +11893,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 105
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12034,7 +12053,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 67
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12244,7 +12263,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -12472,7 +12491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13119,7 +13138,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -13419,7 +13438,7 @@ Transform:
   - {fileID: 655936683}
   - {fileID: 1548474345}
   m_Father: {fileID: 437441460}
-  m_RootOrder: 108
+  m_RootOrder: 106
 --- !u!1001 &1250710670
 Prefab:
   m_ObjectHideFlags: 0
@@ -13541,7 +13560,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -13583,7 +13602,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13769,7 +13788,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -13873,7 +13892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0a666120d323344d973ec6cbf11183f, type: 3}
       propertyPath: m_RootOrder
-      value: 73
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a0a666120d323344d973ec6cbf11183f, type: 3}
       propertyPath: m_LocalScale.x
@@ -14120,7 +14139,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_RootOrder
-      value: 95
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_LocalScale.x
@@ -14196,7 +14215,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -14392,7 +14411,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -14721,7 +14740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467152, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
       propertyPath: m_RootOrder
-      value: 104
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 167688, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
       propertyPath: m_Name
@@ -14881,7 +14900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14985,7 +15004,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -15045,7 +15064,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -15178,7 +15197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 68
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -15244,7 +15263,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e40a78bcbcb91ef4cb6d8da45c124ee7, type: 3}
       propertyPath: m_Name
@@ -15314,7 +15333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -15942,7 +15961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1daa292e20951c34faed4f7b8471e64e, type: 3}
       propertyPath: m_RootOrder
-      value: 92
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1daa292e20951c34faed4f7b8471e64e, type: 3}
       propertyPath: m_LocalScale.z
@@ -16022,7 +16041,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -16057,7 +16076,7 @@ Transform:
   m_Children:
   - {fileID: 1880574984}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!23 &1548420877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16156,7 +16175,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -16216,7 +16235,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -16346,7 +16365,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -16406,7 +16425,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_BounceIntensity: 3.57999992
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -16629,7 +16648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 64
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -16842,7 +16861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
 --- !u!1001 &1624462444
 Prefab:
   m_ObjectHideFlags: 0
@@ -17249,7 +17268,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -17496,7 +17515,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 3.43000007
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -17786,7 +17805,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 101
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -18112,7 +18131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_RootOrder
-      value: 85
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72987d9b19a034e42b6fe96ee86cc460, type: 3}
       propertyPath: m_LocalScale.x
@@ -18532,7 +18551,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 96
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_LocalScale.y
@@ -18970,7 +18989,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_RootOrder
-      value: 98
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 56e408e6d26fcb2449a8652a1433d29b, type: 3}
       propertyPath: m_Name
@@ -19066,7 +19085,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -19350,7 +19369,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_RootOrder
-      value: 86
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9a78e73378b41f14ab00ff60a25d735d, type: 3}
       propertyPath: m_LocalScale.x
@@ -19430,7 +19449,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -19490,7 +19509,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -19702,7 +19721,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 106
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -20129,43 +20148,59 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 437441460}
     m_Modifications:
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -25.9699993
+      value: 16.4103222
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.1100006
+      value: -24.9388771
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -33.7099991
+      value: -3.08012366
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .244182155
+      value: -.482651234
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .251888692
+      value: .273123324
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .134366006
+      value: -.0831010863
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .926753998
+      value: .827976942
       objectReference: {fileID: 0}
     - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .270312995
+      objectReference: {fileID: 0}
+    - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .270313084
+      objectReference: {fileID: 0}
+    - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .270313054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a010d994b765a8341985c5318d8fad06, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1939815052 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
+  m_PrefabInternal: {fileID: 1939815051}
 --- !u!1001 &1943734414
 Prefab:
   m_ObjectHideFlags: 0
@@ -20530,7 +20565,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -20602,7 +20637,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_BounceIntensity: 2.41000009
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -21279,7 +21314,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_RootOrder
-      value: 100
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1428528f92984df43835b85f1ecf53d7, type: 3}
       propertyPath: m_Name
@@ -21352,43 +21387,59 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 437441460}
     m_Modifications:
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -48.5529327
+      value: 13.3580923
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.91628361
+      value: -20.7671566
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.84415603
+      value: -1.83753276
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.575929821
+      value: -.784609318
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .454236001
+      value: .618821561
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .420909941
+      value: -.02356508
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .533675432
+      value: -.0298783742
       objectReference: {fileID: 0}
     - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .135156557
+      objectReference: {fileID: 0}
+    - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .135156497
+      objectReference: {fileID: 0}
+    - target: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .135156617
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2106955101 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 482512, guid: 3342b611c1f654041bae2ad3a9a9eb30, type: 2}
+  m_PrefabInternal: {fileID: 2106955100}
 --- !u!1 &2109152750 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 167688, guid: 3a6d156cbe9c24db887955278863cd9f, type: 2}
