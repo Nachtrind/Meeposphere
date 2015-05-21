@@ -41,6 +41,11 @@ public class Controller : MonoBehaviour
 			}
 		}
 
+		lGraph = help.LoadXMLFile ("Level2");
+		lGraph.WalkableGraph = world.GenerateWalkables (lGraph, globe);
+		lGraph.WalkableGraph = world.AlternativeGenerateWalkables (lGraph, globe);
+		help.SaveXMLFile(Application.dataPath + "/Scripts/Pathfinding/Level1.xml", lGraph);
+
 		/*lGraph = help.LoadXMLFile("Level2X-8.xml");
 		LevelGraph graphi = new LevelGraph ();
 		graphi.BasicGraph = lGraph.BasicGraph;

@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 public class Utilities
 {
 
-		public LevelGraph LoadXMLFile (string _path)
+	public LevelGraph LoadXMLFile (string _path)
 	{  
 		/*
 		var serializer = new XmlSerializer (typeof(LevelGraph));
@@ -18,20 +18,20 @@ public class Utilities
 			return serializer.Deserialize (stream) as LevelGraph;
 		}*/
 		
-		TextAsset _xml = new TextAsset();
-		_xml = (TextAsset)Resources.Load("Level2-Obstacles", typeof(TextAsset));
+		TextAsset _xml = new TextAsset ();
+		_xml = (TextAsset)Resources.Load (_path, typeof(TextAsset));
 		XmlDocument xmldoc = new XmlDocument ();
 		xmldoc.LoadXml (_xml.text);
 		
 		
-		XmlSerializer serializer = new XmlSerializer(typeof(LevelGraph));
+		XmlSerializer serializer = new XmlSerializer (typeof(LevelGraph));
 		XmlReader reader = XmlReader.Create (new StringReader (_xml.text));
-		LevelGraph lGraph = (LevelGraph) serializer.Deserialize (reader);
+		LevelGraph lGraph = (LevelGraph)serializer.Deserialize (reader);
 		
 		return lGraph;
 	}
 			
-			public void SaveLevelGraph (LevelGraph _graph, string _path)
+	public void SaveLevelGraph (LevelGraph _graph, string _path)
 	{
 		
 		BinaryFormatter bf = new BinaryFormatter ();
@@ -41,7 +41,7 @@ public class Utilities
 		file.Close ();
 	}
 
-	public void SaveXMLFile(string _path, LevelGraph _graph)
+	public void SaveXMLFile (string _path, LevelGraph _graph)
 	{
 		var serializer = new XmlSerializer (typeof(LevelGraph));
 		using (var stream = new FileStream(_path, FileMode.Create)) {
@@ -96,7 +96,7 @@ public class Utilities
 			returnGraph = (LevelGraph)bf.Deserialize (file);
 			file.Close ();
 		} else {
-			Debug.LogError("PATH DOESN'T EXIST");
+			Debug.LogError ("PATH DOESN'T EXIST");
 		}
 		
 		//		returnGraph = Resources.LoadAssetAtPath (_path,typeof(LevelGraph)) as LevelGraph;

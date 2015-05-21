@@ -47,7 +47,6 @@ public class MarkerUI : MonoBehaviour
 			}
 		}
 		radius = Vector3.Distance (new Vector3 (0, 0, 0), pushImg.rectTransform.anchoredPosition3D);
-//		Debug.Log (radius);		
 		force = 11.5f;
 		forceRadius = 6.0f;
 	}
@@ -73,7 +72,7 @@ public class MarkerUI : MonoBehaviour
 
 	public void Activate ()
 	{
-		Debug.Log ("ACTIVATE!");
+
 		switch (currentMode) {
 
 		case 0:
@@ -89,7 +88,6 @@ public class MarkerUI : MonoBehaviour
 
 	public void CallMeeples ()
 	{
-		Debug.Log (GameManager.Instance.activeMeeples.Count + " active Meeples");
 		foreach (MeepleController meeple in GameManager.Instance.activeMeeples) {
 //			Debug.Log(this.helper.GetClickedTile (this.transform.position, 
 //			                                      GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe).WorldPos);
@@ -144,9 +142,9 @@ public class MarkerUI : MonoBehaviour
 		if (mouseDown) {
 			this.currentMode = 1;
 			this.activeImg.GetComponent<Image> ().color = this.push;
-			arrowImg.enabled = true;
+			//arrowImg.enabled = true;
 		} else {
-			arrowImg.enabled = false;
+			//arrowImg.enabled = false;
 
 		}
 	}

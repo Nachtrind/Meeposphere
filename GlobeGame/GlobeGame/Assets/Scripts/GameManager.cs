@@ -8,18 +8,18 @@ public class GameManager : MonoBehaviour
 	private static GameManager instance;
 	public List<MeepleController> activeMeeples;
 	public List<MeepleController> allMeeples;
+	public int savedMeeples;
 	public LevelGraph lGraph;
 	public GameObject globe;
 	public Camera arCam;
 	Utilities help = new Utilities ();
-
 	public bool placingMarker;
 
 	public static GameManager Instance {
 		get { return instance ?? (instance = new GameObject ("GameManager").AddComponent<GameManager> ()); }
 	}
 
-	/*
+
 	void OnDrawGizmos ()
 	{
 		foreach (Tile t in lGraph.WalkableGraph) {
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 				Gizmos.DrawSphere (t.WorldPos, 0.3f);
 			}
 		}
-	}*/
+	}
 
 	// Use this for initialization
 	void Awake ()
@@ -52,15 +52,8 @@ public class GameManager : MonoBehaviour
 		}
 
 		globe = GameObject.FindGameObjectsWithTag ("Globe") [0];
-		//Level2
-		lGraph = help.LoadXMLFile ("Level2-Obstacles.xml");
-//		Debug.Log ("Loaded Graph");
-//		Debug.Log (lGraph.WalkableGraph.Count);
-//		Debug.Log (lGraph.WalkableGraph[0].xS);
-//		Debug.Log (lGraph.WalkableGraph [10].WorldPos);
-		//DummyLevel
-		//lGraph = help.LoadLevelGraph (globe, Application.dataPath + "/Scripts/Pathfinding/DummyLevelGraphTilesWithParents.lg");
 
+		LoadLevel1 ();
 	
 	
 		//Set Main Camera
@@ -87,12 +80,39 @@ public class GameManager : MonoBehaviour
 					activeMeeples.Add (mc);
 				}
 			}
-
 		}
 
-		
+		if (Input.GetMouseButtonDown (0)) {
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			if (Physics.Raycast(ray, out hit)){
+				help.GetClickedTile(hit.point, lGraph.WalkableGraph, globe).Walkable = true;
+			}
+		}
+
+		if (Input.GetMouseButtonDown (1)) {
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			if (Physics.Raycast(ray, out hit)){
+				help.GetClickedTile(hit.point, lGraph.WalkableGraph, globe).Walkable = false;
+			}
+		}
+
+		if (Input.GetKeyDown (KeyCode.A)) {
+			help.SaveXMLFile(Application.dataPath + "/Scripts/Pathfinding/Level1.xml", lGraph);
+			Debug.Log("Saved.");
+		}
+
 	}
 
+	private void LoadLevel1 ()
+	{
+		lGraph = help.LoadXMLFile ("Level1");
+	}
 
+	private void LoadLevel2 ()
+	{
+		lGraph = help.LoadXMLFile ("Level2");
+	}
 
 }
