@@ -19,6 +19,20 @@ public class GameManager : MonoBehaviour
 		get { return instance ?? (instance = new GameObject ("GameManager").AddComponent<GameManager> ()); }
 	}
 
+	/*
+	void OnDrawGizmos ()
+	{
+		foreach (Tile t in lGraph.WalkableGraph) {
+			if (t.Walkable) {
+				Gizmos.color = Color.green;
+				Gizmos.DrawSphere (t.WorldPos, 0.3f);
+			} else {
+				Gizmos.color = Color.red;
+				Gizmos.DrawSphere (t.WorldPos, 0.3f);
+			}
+		}
+	}*/
+
 	// Use this for initialization
 	void Awake ()
 	{

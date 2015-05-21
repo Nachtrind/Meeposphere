@@ -19,7 +19,7 @@ public class Controller : MonoBehaviour
 
 	void OnDrawGizmos ()
 	{
-		foreach (Tile t in lGraph.WalkableGraph) {
+		/*foreach (Tile t in lGraph.WalkableGraph) {
 			if (t.Walkable) {
 				Gizmos.color = Color.green;
 				Gizmos.DrawSphere (t.WorldPos, 0.3f);
@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
 				Gizmos.color = Color.red;
 				Gizmos.DrawSphere (t.WorldPos, 0.3f);
 			}
-		}
+		}*/
 	}
 
 	// Use this for initialization
@@ -48,12 +48,12 @@ public class Controller : MonoBehaviour
 		help.SaveXMLFile(Application.dataPath + "/Scripts/Pathfinding/Level2Fix-8.xml", graphi);
 
 		Debug.Log ("Graphi" + graphi.WalkableGraph.Count);*/
-
-		lGraph = lGraph = help.LoadXMLFile ("Level2Fix-8.xml");
+/*
+		lGraph = help.LoadXMLFile ("Level2Fix-8.xml");
 		Debug.Log (lGraph.WalkableGraph.Count);
 		lGraph.WalkableGraph = world.GenerateWalkables (lGraph, globe);
 		lGraph.WalkableGraph = world.AlternativeGenerateWalkables (lGraph, globe);
-		help.SaveXMLFile (Application.dataPath + "/Scripts/Pathfinding/Level2-Obstacles.xml", lGraph);
+		help.SaveXMLFile (Application.dataPath + "/Scripts/Pathfinding/Level2-Obstacles.xml", lGraph);*/
 
 
 		/*lGraph = world.CreateLevelGraph (globe);

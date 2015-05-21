@@ -11,18 +11,33 @@ public class World
 	float angleToAdd = 45.0f;
 	int neighboursToCheck = 8;
 
-
 	public List<Tile> AlternativeGenerateWalkables (LevelGraph _graph, GameObject _world)
 	{
-		GameObject[] objects = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		GameObject[] objects = GameObject.FindObjectsOfType (typeof(GameObject)) as GameObject[];
 		_graph.WalkableGraph = _graph.BasicGraph;
 
 		foreach (GameObject go in objects) {
-			if(go.layer == 11 && (go.tag.Equals("death") || go.tag.Equals("liquid"))){
-				Vector3[] vecs = go.GetComponent<MeshFilter>().mesh.vertices;
-				Debug.Log("Vecs in Mesh: " + vecs.Length);
-				foreach(Vector3 vec in vecs){
-					help.GetClickedTile(vec, _graph.BasicGraph, _world).Walkable = false;
+			if (go.layer == 11 && (go.tag.Equals ("death") || go.tag.Equals ("liquid"))) {
+				Vector3[] vecs = go.GetComponent<MeshFilter> ().mesh.vertices;
+				Debug.Log ("Vecs in Mesh: " + vecs.Length);
+				foreach (Vector3 vec in vecs) {
+					Vector3 worldVec = go.transform.TransformPoint (vec);
+					Vector3 gravityUp = (worldVec - _world.transform.position).normalized;
+					Debug.DrawRay (worldVec + gravityUp * 1.0f, gravityUp * -10.0f, Color.red, 30.0f);
+					RaycastHit hit;
+					if (Physics.Raycast (worldVec + gravityUp * 1.0f, gravityUp * -10.0f, out hit, 10.0f, 1 << 12)) {
+						Debug.Log ("HitGlobe!");
+						help.GetClickedTile (hit.point, _graph.BasicGraph, _world).Walkable = false;
+						help.GetClickedTile (hit.point + new Vector3 (0.3f, 0, 0), _graph.BasicGraph, _world).Walkable = false;
+						help.GetClickedTile (hit.point + new Vector3 (0.3f, 0.3f, 0), _graph.BasicGraph, _world).Walkable = false;
+						help.GetClickedTile (hit.point + new Vector3 (0.3f, 0.3f, 0.3f), _graph.BasicGraph, _world).Walkable = false;
+
+						help.GetClickedTile (hit.point + new Vector3 (0, 0.3f, 0), _graph.BasicGraph, _world).Walkable = false;
+						help.GetClickedTile (hit.point + new Vector3 (0, 0.3f, 0.3f), _graph.BasicGraph, _world).Walkable = false;
+
+						help.GetClickedTile (hit.point + new Vector3 (0, 0, 0.3f), _graph.BasicGraph, _world).Walkable = false;
+						help.GetClickedTile (hit.point + new Vector3 (0.3f, 0, 0.3f), _graph.BasicGraph, _world).Walkable = false;
+					}
 				}
 			}
 		}
@@ -30,7 +45,6 @@ public class World
 		return _graph.WalkableGraph;
 
 	}
-
 
 	public List<Tile> GenerateWalkables (LevelGraph _graph, GameObject _world)
 	{
@@ -45,7 +59,7 @@ public class World
 			Vector3 gravityUp = (t.WorldPos - _world.transform.position).normalized;
 			Debug.DrawRay (_world.transform.position, gravityUp, Color.red, 10.0f);
 			RaycastHit hit;
-			if (Physics.Raycast (_world.transform.position+gravityUp*10.0f, gravityUp, out hit, 40.0f, layerMask)) {
+			if (Physics.Raycast (_world.transform.position, gravityUp, out hit, 50.0f, layerMask)) {
 				t.Walkable = false;
 			}
 			walkable.Add (t);

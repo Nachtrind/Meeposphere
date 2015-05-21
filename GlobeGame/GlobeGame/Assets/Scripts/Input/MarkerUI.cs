@@ -119,6 +119,10 @@ public class MarkerUI : MonoBehaviour
 
 	}
 
+	public void Delete(){
+		Destroy (this.GetComponentInParent<MarkerUI> ().GetComponentInParent<Rigidbody>().gameObject);
+	}
+
 	public void SetToCall ()
 	{
 		this.currentMode = 0;

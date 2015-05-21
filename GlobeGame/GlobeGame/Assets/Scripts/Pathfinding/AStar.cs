@@ -41,11 +41,6 @@ public class AStar
 
 				int newMovementCostToNeighbour = current.GCost + CircleDistance (current.WorldPos, _graph [neigh].WorldPos, _globe);
 				if (newMovementCostToNeighbour < _graph [neigh].GCost || !openSet.Contains (_graph [neigh])) {
-					if(_globe == null){
-						Debug.Log("Shitfuck");
-					}else if(_end == null){
-						Debug.Log ("AAArgh");
-					}
 					_graph [neigh].GCost = newMovementCostToNeighbour;
 					_graph [neigh].HCost = CircleDistance (_graph [neigh].WorldPos, _end.WorldPos, _globe);
 					_graph [neigh].Parent = current;
@@ -72,6 +67,10 @@ public class AStar
 		Tile current = _end;
 
 		while (current != _start) {
+			if(current == null){
+				Debug.Log("Oh no the current!!");
+				return path;
+			}
 			path.Insert (0, current.WorldPos);
 			current = current.Parent;
 		}
