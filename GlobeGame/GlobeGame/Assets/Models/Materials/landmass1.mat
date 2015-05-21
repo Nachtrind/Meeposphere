@@ -20,7 +20,7 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 4, y: 4}
-          m_Offset: {x: 2.60651207, y: 2.60651207}
+          m_Offset: {x: .638596416, y: .638596416}
       data:
         first:
           name: _BumpMap
@@ -69,7 +69,7 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 3, y: 3}
-          m_Offset: {x: 7.81953621, y: 7.81953621}
+          m_Offset: {x: 1.91578937, y: 1.91578937}
       data:
         first:
           name: _MetallicGlossMap
@@ -121,7 +121,7 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: 1.03999996
+        second: 1.11000001
       data:
         first:
           name: _Mode
@@ -134,12 +134,12 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: .639452577, b: .955882311, a: 1.03999996}
+        second: {r: .194442034, g: .876553535, b: 1.10183823, a: 1.11000001}
       data:
         first:
           name: _Color
-        second: {r: .170253009, g: .399264008, b: .492647052, a: 1}
+        second: {r: .124891855, g: .566176474, b: .237495437, a: 1}
       data:
         first:
           name: _EmissionColorUI
-        second: {r: 0, g: .61485827, b: .91911763, a: 1}
+        second: {r: .175173, g: .789687872, b: .992647052, a: 1}

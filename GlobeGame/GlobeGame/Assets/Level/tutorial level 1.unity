@@ -435,7 +435,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 239d4dcd95d3a9a4d8cf05a64fb21849, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8ed1b5c74dd604f78b9f6988a895046f, type: 2}
+      objectReference: {fileID: 2100000, guid: dbc7100663ef6124ca02fb15ec4ceb2b, type: 2}
     - target: {fileID: 400000, guid: 239d4dcd95d3a9a4d8cf05a64fb21849, type: 3}
       propertyPath: m_LocalScale.x
       value: .732608318
@@ -1091,7 +1091,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 239d4dcd95d3a9a4d8cf05a64fb21849, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8ed1b5c74dd604f78b9f6988a895046f, type: 2}
+      objectReference: {fileID: 2100000, guid: dbc7100663ef6124ca02fb15ec4ceb2b, type: 2}
     - target: {fileID: 400000, guid: 239d4dcd95d3a9a4d8cf05a64fb21849, type: 3}
       propertyPath: m_LocalScale.x
       value: .352079123
@@ -2857,7 +2857,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 239d4dcd95d3a9a4d8cf05a64fb21849, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8ed1b5c74dd604f78b9f6988a895046f, type: 2}
+      objectReference: {fileID: 2100000, guid: dbc7100663ef6124ca02fb15ec4ceb2b, type: 2}
     - target: {fileID: 400000, guid: 239d4dcd95d3a9a4d8cf05a64fb21849, type: 3}
       propertyPath: m_LocalScale.x
       value: .604095936
@@ -8319,8 +8319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b849bc9fb838a54bbf0515a1b638228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .0599999987
-  speed2: .0299999993
+  speed: .0399999991
+  speed2: .00700000022
 --- !u!1 &1368432951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,18 +8819,6 @@ Prefab:
     - target: {fileID: 116618, guid: a010d994b765a8341985c5318d8fad06, type: 2}
       propertyPath: m_Name
       value: star-begin 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .482854724
-      objectReference: {fileID: 0}
-    - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .482854694
-      objectReference: {fileID: 0}
-    - target: {fileID: 432460, guid: a010d994b765a8341985c5318d8fad06, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .482854605
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a010d994b765a8341985c5318d8fad06, type: 2}
