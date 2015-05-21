@@ -13,9 +13,9 @@ GameObject:
   - 114: {fileID: 11435310}
   - 65: {fileID: 6595322}
   - 54: {fileID: 5478700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: meeple_pink
-  m_TagString: Untagged
+  m_TagString: Meeple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
