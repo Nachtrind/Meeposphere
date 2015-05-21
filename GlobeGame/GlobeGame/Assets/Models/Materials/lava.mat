@@ -20,7 +20,11 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: e2ed37db1695c9346b42a626c5543ccb, type: 3}
           m_Scale: {x: 1.30999994, y: .219999999}
+<<<<<<< Updated upstream
           m_Offset: {x: .0146467397, y: .0146467397}
+=======
+          m_Offset: {x: .0226894859, y: .0226894859}
+>>>>>>> Stashed changes
       data:
         first:
           name: _BumpMap
@@ -69,7 +73,11 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 2.9000001, y: 4}
+<<<<<<< Updated upstream
           m_Offset: {x: .146467388, y: .146467388}
+=======
+          m_Offset: {x: .226894855, y: .226894855}
+>>>>>>> Stashed changes
       data:
         first:
           name: _MetallicGlossMap
