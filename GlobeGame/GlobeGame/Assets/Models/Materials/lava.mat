@@ -9,7 +9,7 @@ Material:
   m_Name: lava
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -20,11 +20,7 @@ Material:
         second:
           m_Texture: {fileID: 2800000, guid: e2ed37db1695c9346b42a626c5543ccb, type: 3}
           m_Scale: {x: 1.30999994, y: .219999999}
-<<<<<<< HEAD
-          m_Offset: {x: .0939677134, y: .0939677134}
-=======
-          m_Offset: {x: .0301100612, y: .0301100612}
->>>>>>> origin/master
+          m_Offset: {x: .0599984601, y: .0599984601}
       data:
         first:
           name: _BumpMap
@@ -73,11 +69,7 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 2.9000001, y: 4}
-<<<<<<< HEAD
-          m_Offset: {x: .939677119, y: .939677119}
-=======
-          m_Offset: {x: .301100582, y: .301100582}
->>>>>>> origin/master
+          m_Offset: {x: .599984586, y: .599984586}
       data:
         first:
           name: _MetallicGlossMap
