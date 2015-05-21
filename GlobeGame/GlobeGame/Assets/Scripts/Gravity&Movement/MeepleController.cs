@@ -166,7 +166,7 @@ public class MeepleController : MonoBehaviour
 		//only check for Meeples
 		if (active) {
 			int layerMask = 1 << 14;
-			Collider[] hitColliders = Physics.OverlapSphere (mTrans.position, 0.5f, layerMask);
+			Collider[] hitColliders = Physics.OverlapSphere (mTrans.position, 1.0f, layerMask);
 			if (hitColliders.Length > 0) {
 				Debug.Log ("hit meeple");
 				foreach (Collider col in hitColliders) {
