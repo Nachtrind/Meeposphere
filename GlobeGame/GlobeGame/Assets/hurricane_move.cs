@@ -28,12 +28,15 @@ public class hurricane_move : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		transform.Rotate (0,100*Time.deltaTime,0);
+
 		if(Mathf.PingPong(Time.time,move_time) < move_time/2){
 			GetComponent<Rigidbody>().velocity = direction.normalized *speed;}
 		else {GetComponent<Rigidbody>().velocity = backdirection.normalized *speed;}
 
 		 //GetComponent<BoxCollider>().
-	
+//		GetComponent<Rigidbody> ().angularVelocity =(0, 100, 0);
 	}
 	void OnCollisionEnter(Collision collision) {
 		if (collision.collider.tag.Equals("Meeple")) {

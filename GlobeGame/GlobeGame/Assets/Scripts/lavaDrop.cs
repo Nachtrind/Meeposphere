@@ -21,6 +21,7 @@ public class lavaDrop : MonoBehaviour {
 	void Update () {
 
 		GetComponent<Rigidbody>().velocity = direction.normalized *speed;
+
 	}
 
 	void OnCollisionEnter(Collision collision) {
