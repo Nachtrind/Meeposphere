@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
 		globe = GameObject.FindGameObjectsWithTag ("Globe") [0];
 		//Level2
-		lGraph = help.LoadXMLFile ("Level2X-8.xml");
+		lGraph = help.LoadXMLFile ("Level2-Obstacles.xml");
 //		Debug.Log ("Loaded Graph");
 //		Debug.Log (lGraph.WalkableGraph.Count);
 //		Debug.Log (lGraph.WalkableGraph[0].xS);
@@ -62,6 +62,20 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (allMeeples.Count < 1) {
+			GameObject[] meeples = GameObject.FindGameObjectsWithTag ("Meeple");
+			foreach (GameObject meeple in meeples) {
+				allMeeples.Add (meeple.GetComponent<MeepleController> ());
+			}
+			
+			foreach (MeepleController mc in allMeeples) {
+				if (mc.active) {
+					activeMeeples.Add (mc);
+				}
+			}
+
+		}
+
 		
 	}
 

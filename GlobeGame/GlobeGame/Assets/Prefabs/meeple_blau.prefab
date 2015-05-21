@@ -15,7 +15,7 @@ GameObject:
   - 54: {fileID: 5416186}
   m_Layer: 0
   m_Name: meeple_blau
-  m_TagString: Untagged
+  m_TagString: Meeple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106624}
   m_LocalRotation: {x: -.115054786, y: -.047506351, z: .37868017, w: .917118847}
-  m_LocalPosition: {x: -30.1000004, y: 51.5699997, z: -26.5499992}
+  m_LocalPosition: {x: -27.747612, y: 19.5485268, z: -31.599123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,8 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: {fileID: 0}
   rigid: {fileID: 0}
-  active: 0
-  idle: 0
+  active: 1
+  idle: 1
   gotPushed: 0
   m_active: {fileID: 2100000, guid: b9411d9569566b542b43aaca8feafb59, type: 2}
   m_asleep: {fileID: 2100000, guid: d131a44a83821a841b3c72ad1746147b, type: 2}

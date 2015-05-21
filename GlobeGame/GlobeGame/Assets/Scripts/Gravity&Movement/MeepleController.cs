@@ -322,4 +322,12 @@ public class MeepleController : MonoBehaviour
 		
 	}
 
+	public void HitByHurricane(){
+
+	}
+
+	public void HitByLava(){
+
+	}
+
 }

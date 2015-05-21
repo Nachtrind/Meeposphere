@@ -11,6 +11,27 @@ public class World
 	float angleToAdd = 45.0f;
 	int neighboursToCheck = 8;
 
+
+	public List<Tile> AlternativeGenerateWalkables (LevelGraph _graph, GameObject _world)
+	{
+		GameObject[] objects = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		_graph.WalkableGraph = _graph.BasicGraph;
+
+		foreach (GameObject go in objects) {
+			if(go.layer == 11 && (go.tag.Equals("death") || go.tag.Equals("liquid"))){
+				Vector3[] vecs = go.GetComponent<MeshFilter>().mesh.vertices;
+				Debug.Log("Vecs in Mesh: " + vecs.Length);
+				foreach(Vector3 vec in vecs){
+					help.GetClickedTile(vec, _graph.BasicGraph, _world).Walkable = false;
+				}
+			}
+		}
+
+		return _graph.WalkableGraph;
+
+	}
+
+
 	public List<Tile> GenerateWalkables (LevelGraph _graph, GameObject _world)
 	{
 
@@ -22,11 +43,12 @@ public class World
 
 		foreach (Tile t in basic) {
 			Vector3 gravityUp = (t.WorldPos - _world.transform.position).normalized;
+			Debug.DrawRay (_world.transform.position, gravityUp, Color.red, 10.0f);
 			RaycastHit hit;
-			if (Physics.Raycast (t.WorldPos + (gravityUp*-2), t.WorldPos + gravityUp*2, out hit, Mathf.Infinity, layerMask)) {
+			if (Physics.Raycast (_world.transform.position+gravityUp*10.0f, gravityUp, out hit, 40.0f, layerMask)) {
 				t.Walkable = false;
 			}
-			walkable.Add(t);
+			walkable.Add (t);
 		}//END foreach
 
 		return walkable;
@@ -48,7 +70,6 @@ public class World
 
 		graph.BasicGraph = this.GenerateBasicNodes (_world);
 
-		//TODO: Create Walkable Graph
 		graph.WalkableGraph = graph.BasicGraph;
 
 		return graph;

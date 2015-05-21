@@ -19,7 +19,7 @@ public class Utilities
 		}*/
 		
 		TextAsset _xml = new TextAsset();
-		_xml = (TextAsset)Resources.Load("Level2X-8", typeof(TextAsset));
+		_xml = (TextAsset)Resources.Load("Level2-Obstacles.xml", typeof(TextAsset));
 		XmlDocument xmldoc = new XmlDocument ();
 		xmldoc.LoadXml (_xml.text);
 		

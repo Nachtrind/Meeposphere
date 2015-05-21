@@ -73,6 +73,7 @@ public class MarkerUI : MonoBehaviour
 
 	public void Activate ()
 	{
+		Debug.Log ("ACTIVATE!");
 		switch (currentMode) {
 
 		case 0:
@@ -88,6 +89,7 @@ public class MarkerUI : MonoBehaviour
 
 	public void CallMeeples ()
 	{
+		Debug.Log (GameManager.Instance.activeMeeples.Count + " active Meeples");
 		foreach (MeepleController meeple in GameManager.Instance.activeMeeples) {
 //			Debug.Log(this.helper.GetClickedTile (this.transform.position, 
 //			                                      GameManager.Instance.lGraph.WalkableGraph, GameManager.Instance.globe).WorldPos);
