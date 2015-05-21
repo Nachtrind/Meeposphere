@@ -15,6 +15,8 @@ public class MeepleGravity : MonoBehaviour
 		rigid.constraints = RigidbodyConstraints.FreezeRotation;
 		rigid.useGravity = false;
 		meepleTrans = transform;	
+
+		gravity = GameObject.FindGameObjectWithTag ("Globe").GetComponent<GlobeGravity> ();
 	}
 	
 	// Update is called once per frame

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 419212}
   - 33: {fileID: 3366458}
   - 23: {fileID: 2369248}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: long_hole2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,9 +23,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193396}
-  m_LocalRotation: {x: .770788193, y: .0987110808, z: -.617314339, w: .122738995}
-  m_LocalPosition: {x: -2.03999996, y: 16.1499996, z: -13.4899998}
-  m_LocalScale: {x: 1.14804065, y: 1, z: .825504601}
+  m_LocalRotation: {x: .67046845, y: -.64225322, z: -.0963953137, w: .358735114}
+  m_LocalPosition: {x: 14.6642933, y: -19.5387154, z: 3.19891047}
+  m_LocalScale: {x: .277168453, y: .241427362, z: .19929947}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
