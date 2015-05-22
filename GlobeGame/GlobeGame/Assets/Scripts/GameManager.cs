@@ -99,8 +99,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		if (Input.GetKeyDown (KeyCode.A)) {
-			help.SaveXMLFile(Application.dataPath + "/Scripts/Pathfinding/Level1.xml", lGraph);
-			Debug.Log("Saved.");
+			help.SaveXMLFile(Application.dataPath + "/Scripts/Pathfinding/Level1.xml", lGraph); Debug.Log("Saved."); 
 		}
 
 	}
