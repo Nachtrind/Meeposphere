@@ -10,11 +10,17 @@ public class MeepleController : MonoBehaviour
 	public bool active;
 	public bool idle;
 	bool dead;
+	bool hitByHurricane;
+	float pushTimer;
+	float pushTime = 2.0f;
+
 
 	//Stuff after being pushed
 	public bool gotPushed;
-	float pushTimer;
-	float pushTime = 2.0f;
+	float hurricaneTimer;
+	float hurricaneTime = 2.0f;
+
+
 
 	//Stuff for material change
 	public Material m_active;
@@ -130,6 +136,12 @@ public class MeepleController : MonoBehaviour
 		} else {
 			pushTimer += Time.deltaTime;
 		}
+
+		if (hitByHurricane && IsGrounded () && hurricaneTimer > hurricaneTime && !dead) {
+			SetAsleep ();
+		} else {
+			hurricaneTimer += Time.deltaTime;
+		}
 		
 	}
 
@@ -211,7 +223,8 @@ public class MeepleController : MonoBehaviour
 		gotCalledByPlayer = true;
 		idle = false;
 		reachedTarget = false;
-		mTrans.LookAt (target);;
+		mTrans.LookAt (target);
+		;
 		gravity.Gravitate (mTrans);
 		speed = walkSpeed;
 	}
@@ -316,17 +329,30 @@ public class MeepleController : MonoBehaviour
 
 	void OnCollisionEnter (Collision collision)
 	{
-		if (collision.transform.tag.Equals ("death")) {
+		if (collision.transform.tag.Equals ("death") || collision.transform.tag.Equals ("liquid")) {
 			this.Dead ();
 		}
 		
 	}
 
-	public void HitByHurricane(){
+	public void HitByHurricane ()
+	{
+
+		this.gameObject.layer = 15;
+		hitByHurricane = true;
+		Vector3 random = new Vector3 (Random (-1, 1), Random (-1, 1), Random (-1, 1)); 
+		rigid.AddForce (mTrans.up * 30.0f, ForceMode.Impulse);
+		GameManager.Instance.activeMeeples.Remove (this);
+		SetPaniced ();
+		active = false;
+		idle = false;
+
+		hurricaneTimer = 0.0f;
 
 	}
 
-	public void HitByLava(){
+	public void HitByLava ()
+	{
 
 	}
 

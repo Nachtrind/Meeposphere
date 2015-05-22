@@ -990,6 +990,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 139186, guid: 22cd230f08fbefb4e9634ebe53a098b2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11448952, guid: 22cd230f08fbefb4e9634ebe53a098b2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 22cd230f08fbefb4e9634ebe53a098b2, type: 2}
@@ -4576,6 +4580,7 @@ GameObject:
   - 124: {fileID: 709582016}
   - 92: {fileID: 709582015}
   - 81: {fileID: 709582014}
+  - 114: {fileID: 709582019}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -4648,6 +4653,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &709582019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709582013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1967d1f9ceaed4285f5f6c618bd695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeMeeples: []
+  allMeeples: []
+  savedMeeples: 0
+  globe: {fileID: 0}
+  arCam: {fileID: 0}
+  placingMarker: 0
 --- !u!1001 &724592161
 Prefab:
   m_ObjectHideFlags: 0
